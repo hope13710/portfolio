@@ -306,6 +306,23 @@ h2.stage-title {
   box-shadow: 0 0 0 1px var(--line);
 }
 
+.stage-icon-award {
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: #fff;
+}
+
+.stage-icon-award svg {
+  width: 62%;
+  height: 62%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .stage-role {
   display: inline-block;
   margin: 16px 0 0;
@@ -748,6 +765,13 @@ html.js .stage[data-active] [data-reveal] {
   }
 }
 
+/* Below this width the stage names would run into the images; keep just the dots. */
+@media (max-width: 1360px) {
+  .stage-nav-label {
+    display: none;
+  }
+}
+
 /* ───────── Small laptop / tablet landscape ───────── */
 @media (max-width: 1200px) {
   .stage {
@@ -756,10 +780,6 @@ html.js .stage[data-active] [data-reveal] {
 
   .stage-inner {
     grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
-  }
-
-  .stage-nav-label {
-    display: none;
   }
 
   .highlights {
