@@ -11,6 +11,7 @@ import goraeWeb from "@/assets/gorae-web.webp";
 import goraeApp from "@/assets/gorae-app.webp";
 import teamnimalsScreens from "@/assets/teamnimals-screens.webp";
 import teamnimalsApp from "@/assets/teamnimals-app.webp";
+import teamnimalsReviews from "@/assets/teamnimals-reviews.webp";
 
 /** Every piece of visible copy is written in both languages. */
 export type L = { ko: string; en: string };
@@ -236,11 +237,17 @@ export const stages: Stage[] = [
         caption: { ko: "팀플 성향 테스트", en: "Team-play personality test" },
         position: "0% 50%",
       },
-      inset: {
-        src: teamnimalsScreens,
-        alt: { ko: "팀니멀즈 AI 팀 궁합 분석 화면", en: "Teamnimals AI team-chemistry screens" },
-        position: "65% 50%",
-      },
+      inset: [
+        {
+          src: teamnimalsScreens,
+          alt: { ko: "팀니멀즈 AI 팀 궁합 분석 화면", en: "Teamnimals AI team-chemistry screens" },
+          position: "65% 50%",
+        },
+        {
+          src: teamnimalsReviews,
+          alt: { ko: "팀니멀즈 실제 SNS 바이럴 후기", en: "Real Teamnimals shares on social media" },
+        },
+      ],
     },
   },
 ];
