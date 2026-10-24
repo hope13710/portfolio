@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { Controls } from "@/components/Controls";
-import { Frame, FrameCycle } from "@/components/Frame";
+import { Frame, FrameCycle, FrameSlider } from "@/components/Frame";
 import { GalleryButton } from "@/components/GalleryButton";
 import { Lightbox } from "@/components/Lightbox";
 import { Sponsors } from "@/components/Sponsors";
@@ -152,7 +152,7 @@ export default function Home() {
 
                 <figure className={`stage-media media-pair${stage.media.inset ? "" : " media-solo"}`} data-reveal>
                   <div className="media-main">
-                    <Frame picture={stage.media.main} variant="wide" sizes="(max-width: 900px) 90vw, 680px" zoomable />
+                    <FrameSlider pictures={stage.media.main} variant="wide" sizes="(max-width: 900px) 90vw, 680px" zoomable />
                   </div>
                   {stage.media.inset && (
                     <div className="media-inset">

@@ -70,7 +70,8 @@ export type Stage = {
   sponsors?: { label: L; logos: { src: StaticImageData; name: string; scale?: number }[] };
   /** Several inset pictures take turns in the same frame. */
   /** Without an inset, the main picture takes the full width of the media column. */
-  media: { main: Picture; inset?: Picture | Picture[] };
+  /** Several main pictures become a slider the viewer flips through (arrows, dots or swipe). */
+  media: { main: Picture | Picture[]; inset?: Picture | Picture[] };
 };
 
 export const profileIntro = {
@@ -296,10 +297,6 @@ export const stages: Stage[] = [
     ],
     gallery: [
       {
-        src: enactusGallery01,
-        alt: { ko: "2025.11 SEOUL:ution 해커톤 — 참가자 단체사진", en: "Nov 2025 · SEOUL:ution Hackathon — all participants" },
-      },
-      {
         src: enactusGallery02,
         alt: { ko: "2025.11 SEOUL:ution 해커톤 — 대회장 전경", en: "Nov 2025 · SEOUL:ution Hackathon — the venue" },
       },
@@ -335,11 +332,17 @@ export const stages: Stage[] = [
       },
     ],
     media: {
-      main: {
-        src: enactusGroup,
-        alt: { ko: "2025 인액터스 서울시립대 단체사진", en: "Enactus UOS 2025 group photo" },
-        position: "50% 40%",
-      },
+      main: [
+        {
+          src: enactusGroup,
+          alt: { ko: "2025 인액터스 서울시립대 단체사진", en: "Enactus UOS 2025 group photo" },
+          position: "50% 40%",
+        },
+        {
+          src: enactusGallery01,
+          alt: { ko: "2025.11 SEOUL:ution 해커톤 참가자 단체사진", en: "Nov 2025 · SEOUL:ution Hackathon participants" },
+        },
+      ],
       inset: [
         {
           src: enactusPoster,
