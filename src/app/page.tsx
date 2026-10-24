@@ -52,10 +52,15 @@ export default function Home() {
                   </p>
                 ))}
               </div>
-              <ul className="chips" data-reveal>
-                {profileIntro.interests.map((interest) => (
-                  <li key={interest.en}>
-                    <T t={interest} />
+              <ul className="proofs" data-reveal>
+                {profileIntro.proofs.map((proof) => (
+                  <li key={proof.value.en}>
+                    <strong className="proof-value">
+                      <T t={proof.value} />
+                    </strong>
+                    <span className="proof-detail">
+                      <T t={proof.detail} />
+                    </span>
                   </li>
                 ))}
               </ul>

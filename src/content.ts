@@ -99,10 +99,22 @@ export const profileIntro = {
       en: "Today, my goal is to build infrastructure for artists around the world, where technology meets entertainment.",
     },
   ],
-  interests: [
-    { ko: "IT / AI", en: "IT / AI" },
-    { ko: "엔터테인먼트", en: "Entertainment" },
-    { ko: "창업", en: "Startups" },
+  /** Results at a glance, under the intro. */
+  proofs: [
+    {
+      value: { ko: "주요 기관 대회 수상", en: "Awards from major institutions" },
+      detail: {
+        ko: "창업진흥원, 한국경제신문, 현대해상, 과학기술사업화진흥원 등",
+        en: "KISED, The Korea Economic Daily, Hyundai Marine & Fire, COMPA and more",
+      },
+    },
+    {
+      value: { ko: "서비스 유료화", en: "Paid product" },
+      detail: {
+        ko: "아이디어부터 개발, 수익화까지. 전 사이클 경험",
+        en: "From idea to development to revenue: the full cycle",
+      },
+    },
   ],
   photo: {
     src: profile,
