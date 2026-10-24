@@ -4,6 +4,7 @@ import profile from "@/assets/profile.webp";
 import iconEnactus from "@/assets/icon-enactus.png";
 import iconGorae from "@/assets/icon-gorae.png";
 import iconTeamnimals from "@/assets/icon-teamnimals.png";
+import armyStartupLogo from "@/assets/army-startup-logo.png";
 import kracerMain from "@/assets/kracer-main.webp";
 import kracerField from "@/assets/kracer-field.webp";
 import kracerKakao from "@/assets/kracer-kakao.webp";
@@ -40,8 +41,10 @@ export type Stage = {
   period: L;
   /** Scale at a glance, shown beside the period. */
   badge: L;
-  /** Rounded-square app icon shown beside the title; without one, a trophy tile marks a competition. */
+  /** Rounded-square app icon shown beside the title. */
   icon?: StaticImageData;
+  /** Wordmark shown in place of the title text (the text stays for screen readers). */
+  titleLogo?: StaticImageData;
   title: L;
   role: L;
   summary: L;
@@ -324,9 +327,10 @@ export const stages: Stage[] = [
   {
     id: "stage-4",
     nav: "ARMY STARTUP",
-    period: { ko: "2026 · 제16회", en: "2026 · 16th" },
+    period: { ko: "2026", en: "2026" },
     badge: { ko: "본선 진출 및 수상", en: "Finalist & award winner" },
-    title: { ko: "육군창업경진대회", en: "ROK Army Startup Competition" },
+    titleLogo: armyStartupLogo,
+    title: { ko: "2026 제16회 육군창업경진대회", en: "ROK Army Startup Competition 2026 (16th)" },
     role: { ko: "팀 Re:serve 대표", en: "Team lead, Team Re:serve" },
     summary: {
       ko: "버려지던 훈련 데이터를 AI 리포트로 바꾸는 서비스로 본선(25팀) 진출 및 수상",

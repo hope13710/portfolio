@@ -91,18 +91,19 @@ export default function Home() {
                     </span>
                   </p>
                   <h2 className="stage-title" data-reveal>
-                    {stage.icon ? (
-                      <Image className="stage-icon" src={stage.icon} alt="" />
+                    {stage.titleLogo ? (
+                      <>
+                        <Image className="stage-title-logo" src={stage.titleLogo} alt="" />
+                        <span className="sr-only">
+                          <T t={stage.title} />
+                        </span>
+                      </>
                     ) : (
-                      <span className="stage-icon stage-icon-award" aria-hidden="true">
-                        <svg viewBox="0 0 24 24">
-                          <path d="M7 4h10v4a5 5 0 0 1-10 0V4Z" />
-                          <path d="M7 6H4.5v1.5A3 3 0 0 0 7.4 10.5M17 6h2.5v1.5a3 3 0 0 1-2.9 3" />
-                          <path d="M12 13v3.5M8.5 20h7M9.5 20l.6-3.5h3.8l.6 3.5" />
-                        </svg>
-                      </span>
+                      <>
+                        {stage.icon && <Image className="stage-icon" src={stage.icon} alt="" />}
+                        <T t={stage.title} />
+                      </>
                     )}
-                    <T t={stage.title} />
                   </h2>
                   <p className="stage-role" data-reveal>
                     <T t={stage.role} />
