@@ -76,9 +76,7 @@ export type Stage = {
 
 export const profileIntro = {
   id: "stage-0",
-  nav: "FOUNDER",
-  /** Shown beside STAGE 00; the side indicator uses the shorter `nav`. */
-  eyebrow: "FOUNDER / PRODUCT BUILDER",
+  nav: "PRODUCT BUILDER",
   name: { ko: "강주영", en: "Kang Ju Yeong" },
   alias: { ko: "Kang Ju Yeong · Ethan", en: "Ethan · 강주영" },
   headline: {
