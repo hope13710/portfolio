@@ -734,6 +734,25 @@ html[data-theme="dark"] .sponsors img {
   max-width: 14em;
 }
 
+.contact-body {
+  margin-top: 28px;
+  max-width: 36em;
+  font-size: clamp(16px, 1.35vw, 18px);
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.contact-body p {
+  margin: 0;
+}
+
+/* The last sentence is the invitation; give it a little more weight. */
+.contact-body p:last-child {
+  margin-top: 0.6em;
+  color: var(--fg);
+  font-weight: 600;
+}
+
 .contact-email {
   display: inline-block;
   margin-top: 30px;

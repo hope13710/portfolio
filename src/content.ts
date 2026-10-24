@@ -418,8 +418,23 @@ export const contact = {
   id: "stage-5",
   nav: "NEXT STAGE",
   headline: {
-    ko: "다음 스테이지를 함께할 동료를 찾는 중",
-    en: "Looking for my next party",
+    ko: "아티스트를 위한 인프라를 구축하고자 합니다",
+    en: "Building infrastructure for artists",
   },
+  /** A short first-person vision in full sentences, like the intro. */
+  body: [
+    {
+      ko: "AI가 많은 것을 대신하는 시대에도, 누군가를 좋아하고 응원하는 마음은 변하지 않는다고 믿습니다.",
+      en: "Even as AI takes over more of what we do, I believe the way we love and cheer for others won’t change.",
+    },
+    {
+      ko: "엔터테인먼트와 기술을 결합해 이 시장의 비효율을 풀어가려 합니다.",
+      en: "I want to bring entertainment and technology together to fix what’s broken in this market.",
+    },
+    {
+      ko: "다음 10년을 함께할 열정 있는 동료를 찾고 있습니다.",
+      en: "I’m looking for passionate people to spend the next ten years with.",
+    },
+  ],
   email: "hope13710@gmail.com",
 };

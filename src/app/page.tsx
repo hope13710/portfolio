@@ -176,6 +176,13 @@ export default function Home() {
             <h2 className="contact-headline" data-reveal>
               <T t={contact.headline} />
             </h2>
+            <div className="contact-body" data-reveal>
+              {contact.body.map((sentence) => (
+                <p key={sentence.en}>
+                  <T t={sentence} />
+                </p>
+              ))}
+            </div>
             <a className="contact-email" href={`mailto:${contact.email}`} data-reveal>
               {contact.email}
               <span aria-hidden="true"> ↗</span>
