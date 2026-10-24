@@ -177,7 +177,7 @@ export const stages: Stage[] = [
     media: {
       main: {
         src: goraeApp,
-        alt: { ko: "고래코리안 서비스 화면", en: "Gorae Korean app screens" },
+        alt: { ko: "온라인 실용 한국어 회화 플랫폼 고래코리안", en: "Gorae Korean, an online platform for practical Korean conversation" },
         caption: { ko: "고래코리안 서비스 화면", en: "Gorae Korean app" },
       },
       inset: {
@@ -224,7 +224,7 @@ export const stages: Stage[] = [
     media: {
       main: {
         src: teamnimalsApp,
-        alt: { ko: "팀니멀즈 성향 테스트 화면", en: "Teamnimals personality test screens" },
+        alt: { ko: "팀플 성향 테스트 + AI 팀 궁합 분석 서비스", en: "Team-play personality test + AI team-chemistry analysis" },
         caption: { ko: "팀플 성향 테스트", en: "Team-play personality test" },
         position: "0% 50%",
       },
