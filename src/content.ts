@@ -118,6 +118,7 @@ export const stages: Stage[] = [
     links: [
       { label: { ko: "Instagram", en: "Instagram" }, href: "https://www.instagram.com/enactus_uos_" },
       { label: { ko: "해커톤 기사", en: "Hackathon press" }, href: "https://www.joongang.co.kr/article/25387687" },
+      { label: { ko: "AI 교육 기사", en: "AI program press" }, href: "https://news.nate.com/view/20250923n02279" },
     ],
     gallery: [
       {
@@ -126,36 +127,33 @@ export const stages: Stage[] = [
       },
       {
         src: enactusGallery02,
-        alt: { ko: "2025.11 SEOUL:ution 해커톤 — 1박 2일 개발 현장", en: "Nov 2025 · SEOUL:ution Hackathon — the overnight build" },
+        alt: { ko: "2025.11 SEOUL:ution 해커톤 — 대회장 전경", en: "Nov 2025 · SEOUL:ution Hackathon — the venue" },
       },
       {
         src: enactusGallery03,
+        alt: { ko: "2025.11 SEOUL:ution 해커톤 — 1박 2일 개발 현장", en: "Nov 2025 · SEOUL:ution Hackathon — the overnight build" },
+      },
+      {
+        src: enactusGallery04,
         alt: {
           ko: "2025.06 ㈜캥스터즈 조정흠 부대표 초청 특강 — 캠퍼스타운 역대 최대 참석",
           en: "Jun 2025 · Talk with Kangsters’ vice CEO — Campus Town’s best-attended talk",
         },
       },
       {
-        src: enactusGallery04,
+        src: enactusGallery05,
         alt: {
           ko: "2025.09 캠퍼스타운 ‘AI SCHOOL’ 수업 현장 (사진: 서울시립대)",
           en: "Sep 2025 · Campus Town ‘AI SCHOOL’ class (photo: University of Seoul)",
         },
       },
       {
-        src: enactusGallery05,
-        alt: { ko: "2025.10 전국 7개 대학 연합 아이디어톤 — 대상", en: "Oct 2025 · Seven-university ideathon — Grand Prize" },
-      },
-      {
         src: enactusGallery06,
-        alt: { ko: "2025.04 강북지부 4개 대학 연합 아이디어톤", en: "Apr 2025 · Four-university ideathon, Gangbuk chapter" },
+        alt: { ko: "2025.04 ㈜어치브모먼트 김기현 대표 초청 강연", en: "Apr 2025 · Talk with Achievement Moment CEO Kim Ki-hyun" },
       },
       {
         src: enactusGallery07,
-        alt: {
-          ko: "2025.05 고려대·성균관대·시립대·한국외대 연합 네트워킹 (약 100명)",
-          en: "May 2025 · Four-university networking night (~100 people)",
-        },
+        alt: { ko: "2025.08 ㈜민들레마음 손유린 대표 초청 강연", en: "Aug 2025 · Talk with Mindeulle Maeum CEO Son Yu-rin" },
       },
       {
         src: enactusGallery08,

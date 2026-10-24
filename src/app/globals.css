@@ -918,6 +918,114 @@ html.js .stage[data-active] [data-reveal] {
   user-select: none;
 }
 
+.lightbox-gallery {
+  height: 100%;
+  overflow-y: auto;
+  padding: 72px max(16px, 4vw) 40px;
+}
+
+.lightbox-title {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.lightbox-title span {
+  margin-left: 6px;
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.lightbox-grid {
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px 16px;
+}
+
+.lightbox-thumb {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: left;
+  font: inherit;
+  cursor: zoom-in;
+}
+
+.lightbox-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.2s ease;
+}
+
+.lightbox-thumb:hover img,
+.lightbox-thumb:focus-visible img {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+.lightbox-thumb span {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.lightbox-back {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lightbox-back svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+@media (max-width: 600px) {
+  .lightbox-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 10px;
+  }
+
+  .lightbox-thumb span {
+    font-size: 11.5px;
+  }
+}
+
 .gallery-btn {
   font: inherit;
   font-size: 13px;
