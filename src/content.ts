@@ -12,6 +12,8 @@ import sponsorKosme from "@/assets/sponsors/kosme.png";
 import sponsorKised from "@/assets/sponsors/kised.png";
 import sponsorKyobo from "@/assets/sponsors/kyobo.png";
 import sponsorKoreanAir from "@/assets/sponsors/korean-air.png";
+import awardHyundaiMarine from "@/assets/sponsors/hyundai-marine.png";
+import awardSeoulImpact from "@/assets/sponsors/seoul-impact.png";
 import kracerMain from "@/assets/kracer-main.webp";
 import kracerField from "@/assets/kracer-field.webp";
 import kracerKakao from "@/assets/kracer-kakao.webp";
@@ -61,7 +63,7 @@ export type Stage = {
   links: { label: L; href: string }[];
   /** On-site photos opened from the link row; each `alt` doubles as the caption. */
   gallery?: Picture[];
-  /** Organizers and sponsors shown under the images, e.g. for a competition. */
+  /** Logos shown under the images: a competition's organizers and sponsors, or the programs behind awards. */
   sponsors?: { label: L; logos: { src: StaticImageData; name: string }[] };
   /** Several inset pictures take turns in the same frame. */
   media: { main: Picture & { caption: L }; inset: Picture | Picture[] };
@@ -264,6 +266,13 @@ export const stages: Stage[] = [
       { label: { ko: "goraekorean.site", en: "goraekorean.site" }, href: "https://goraekorean.site" },
       { label: { ko: "MOU 기사", en: "MOU press" }, href: "https://www.startupdaily.kr/news/articleView.html?idxno=6454" },
     ],
+    sponsors: {
+      label: { ko: "수상·선정", en: "Awards & selections" },
+      logos: [
+        { src: awardHyundaiMarine, name: "현대해상 Hyundai Marine & Fire Insurance" },
+        { src: awardSeoulImpact, name: "서울시립대 캠퍼스타운 SEOUL IMPACT" },
+      ],
+    },
     media: {
       main: {
         src: goraeApp,
