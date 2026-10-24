@@ -34,7 +34,7 @@ export default function Home() {
               <p className="eyebrow" data-reveal>
                 <span className="eyebrow-stage">{stageNo(0)}</span>
                 <span className="eyebrow-rule" aria-hidden="true" />
-                <span>{profileIntro.nav}</span>
+                <span className="eyebrow-role">{profileIntro.nav}</span>
               </p>
               <h1 className="intro-name" data-reveal>
                 <T t={profileIntro.name} />

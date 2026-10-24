@@ -265,6 +265,11 @@ a {
   white-space: nowrap;
 }
 
+.eyebrow-role {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .eyebrow-rule {
   width: 36px;
   height: 1px;
