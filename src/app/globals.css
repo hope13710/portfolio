@@ -466,19 +466,13 @@ h2.stage-title {
   grid-row: 1;
 }
 
-.media-pair figcaption {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-/* A stage without an inset: the main picture, caption and logos span the whole media column. */
+/* A stage without an inset: the main picture and logos span the whole media column. */
 .media-solo {
   grid-template-columns: minmax(0, 1fr);
   padding-bottom: 0;
 }
 
 .media-solo .media-main,
-.media-solo figcaption,
 .media-solo .sponsors {
   grid-column: 1;
 }
@@ -491,8 +485,9 @@ h2.stage-title {
    white logos in dark mode. */
 .sponsors {
   grid-column: 1 / -1;
-  grid-row: 3;
-  margin-top: 36px;
+  grid-row: 2;
+  /* Clear the inset, which drops below the main picture. */
+  margin-top: calc(var(--drop) + 28px);
 }
 
 .sponsors-label {
@@ -584,21 +579,6 @@ html[data-theme="dark"] .sponsors img {
   grid-row: 1;
   align-self: end;
   margin-bottom: calc(-1 * var(--drop));
-}
-
-.stage-media figcaption {
-  display: flex;
-  gap: 10px;
-  justify-content: flex-end;
-  margin-top: 14px;
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.04em;
-  color: var(--faint);
-}
-
-.caption-no {
-  color: var(--accent);
 }
 
 /* ───────── STAGE 00 ───────── */
@@ -909,10 +889,6 @@ html.js .stage[data-active] [data-reveal] {
     order: -1;
     width: min(240px, 62%);
     justify-self: start;
-  }
-
-  .media-intro figcaption {
-    justify-content: flex-start;
   }
 
   .stage-nav {

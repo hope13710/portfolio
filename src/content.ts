@@ -66,7 +66,7 @@ export type Stage = {
   sponsors?: { label: L; logos: { src: StaticImageData; name: string }[] };
   /** Several inset pictures take turns in the same frame. */
   /** Without an inset, the main picture takes the full width of the media column. */
-  media: { main: Picture & { caption: L }; inset?: Picture | Picture[] };
+  media: { main: Picture; inset?: Picture | Picture[] };
 };
 
 export const profileIntro = {
@@ -102,7 +102,6 @@ export const profileIntro = {
   photo: {
     src: profile,
     alt: { ko: "강주영 프로필 사진", en: "Portrait of Kang Ju Yeong" },
-    caption: { ko: "강주영 · Ethan", en: "Kang Ju Yeong · Ethan" },
     position: "50% 30%",
   },
 };
@@ -122,24 +121,24 @@ export const stages: Stage[] = [
     },
     highlights: [
       {
+        value: { ko: "본선 진출 및 수상", en: "Finalist & award" },
+        detail: {
+          ko: "육군본부 주최 · 본선 25팀 선정 · 팀 Re:serve 대표",
+          en: "Hosted by ROK Army HQ · top 25 finalists · led Team Re:serve",
+        },
+      },
+      {
         value: { ko: "kracer", en: "kracer" },
         detail: {
-          ko: "출품작 · 평가 데이터를 다음 교육으로 잇는 AI 교육·평가 운영체제",
-          en: "Our entry · an AI training and evaluation platform that carries assessment data into the next training",
+          ko: "평가 데이터를 다음 교육으로 잇는 AI 교육·평가 운영체제 기획 및 개발 · 30일간 신규 기능 7개 · 사전예약 기관 3곳",
+          en: "Planned and built an AI training and evaluation platform linking assessment data to the next training · 7 new features in 30 days · 3 organizations pre-registered",
         },
       },
       {
-        value: { ko: "조교 4인 팀", en: "Team of four" },
+        value: { ko: "AI 분석", en: "AI analysis" },
         detail: {
-          ko: "육군 39사단 합천예비군훈련대 조교로 팀 구성 · 대표로 기획·개발·사업계획 총괄",
-          en: "Instructors at the 39th Division reserve training unit · led product, development and the business plan",
-        },
-      },
-      {
-        value: { ko: "실서비스 구현", en: "Working product" },
-        detail: {
-          ko: "현장 평가 입력 · AI 분석 리포트 · 카카오톡 개인 리포트까지 작동",
-          en: "On-site scoring, AI analysis reports and KakaoTalk personal reports, all working",
+          ko: "조직이 직접 설정한 지표 기반 AI 분석 아키텍처 설계 및 구현 · 계산은 시스템, 해석은 AI, 최종 결정은 사람",
+          en: "Designed and built an AI analysis architecture on metrics each organization defines · the system scores, AI interprets, people decide",
         },
       },
     ],
@@ -166,7 +165,6 @@ export const stages: Stage[] = [
           ko: "kracer — 차세대 AI 교육·평가 운영체제 (배경 사진: 대한민국 육군)",
           en: "kracer — a next-generation AI training and evaluation platform (background photo: ROK Army)",
         },
-        caption: { ko: "출품작 kracer · 팀 Re:serve", en: "Entry: kracer · Team Re:serve" },
       },
     },
   },
@@ -235,7 +233,6 @@ export const stages: Stage[] = [
       main: {
         src: goraeApp,
         alt: { ko: "온라인 실용 한국어 회화 플랫폼 고래코리안", en: "Gorae Korean, an online platform for practical Korean conversation" },
-        caption: { ko: "고래코리안 서비스 화면", en: "Gorae Korean app" },
       },
       inset: {
         src: goraeWeb,
@@ -332,7 +329,6 @@ export const stages: Stage[] = [
       main: {
         src: enactusGroup,
         alt: { ko: "2025 인액터스 서울시립대 단체사진", en: "Enactus UOS 2025 group photo" },
-        caption: { ko: "2025 Enactus", en: "Enactus, 2025" },
         position: "50% 40%",
       },
       inset: [
@@ -389,7 +385,6 @@ export const stages: Stage[] = [
       main: {
         src: teamnimalsApp,
         alt: { ko: "팀플 성향 테스트 + AI 팀 궁합 분석 서비스", en: "Team-play personality test + AI team-chemistry analysis" },
-        caption: { ko: "팀플 성향 테스트", en: "Team-play personality test" },
         position: "0% 50%",
       },
       inset: [

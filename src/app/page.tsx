@@ -62,10 +62,6 @@ export default function Home() {
 
             <figure className="stage-media media-intro" data-reveal>
               <Frame picture={profileIntro.photo} variant="tall" sizes="(max-width: 900px) 60vw, 420px" priority />
-              <figcaption>
-                <span className="caption-no">00</span>
-                <T t={profileIntro.photo.caption} />
-              </figcaption>
             </figure>
           </div>
 
@@ -161,10 +157,6 @@ export default function Home() {
                       <FrameCycle pictures={stage.media.inset} variant="tall" sizes="(max-width: 900px) 30vw, 200px" zoomable />
                     </div>
                   )}
-                  <figcaption>
-                    <span className="caption-no">{String(no).padStart(2, "0")}</span>
-                    <T t={stage.media.main.caption} />
-                  </figcaption>
                   {stage.sponsors && (
                     <div className="sponsors">
                       <p className="sponsors-label">
