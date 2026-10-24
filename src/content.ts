@@ -35,6 +35,8 @@ export type Stage = {
   id: string;
   nav: string;
   period: L;
+  /** Scale at a glance, shown beside the period. */
+  badge: L;
   /** Rounded-square app icon shown beside the title. */
   icon: StaticImageData;
   title: L;
@@ -93,6 +95,7 @@ export const stages: Stage[] = [
     id: "stage-1",
     nav: "ENACTUS",
     period: { ko: "2025", en: "2025" },
+    badge: { ko: "행사 8회 개최", en: "8 events hosted" },
     icon: iconEnactus,
     title: { ko: "Enactus", en: "Enactus" },
     role: { ko: "회장", en: "President" },
@@ -197,6 +200,7 @@ export const stages: Stage[] = [
     id: "stage-2",
     nav: "GORAE KOREAN",
     period: { ko: "2024.04 – 2025.08", en: "Apr 2024 – Aug 2025" },
+    badge: { ko: "수상·선정 6건", en: "6 awards & selections" },
     icon: iconGorae,
     title: { ko: "고래코리안", en: "Gorae Korean" },
     role: { ko: "공동창업자 · 서비스 기획 · UX/UI · 노코드 개발", en: "Co-founder · Product · UX/UI · No-code" },
@@ -262,6 +266,7 @@ export const stages: Stage[] = [
     id: "stage-3",
     nav: "TEAMNIMALS",
     period: { ko: "2025", en: "2025" },
+    badge: { ko: "재학생 1/8 사용", en: "Used by 1 in 8 students" },
     icon: iconTeamnimals,
     title: { ko: "팀니멀즈", en: "Teamnimals" },
     role: { ko: "기획 · AI 로직 · UX/UI · 노코드 개발 · 그로스", en: "Product · AI logic · UX/UI · No-code · Growth" },

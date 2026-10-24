@@ -245,8 +245,9 @@ a {
 /* ───────── Shared stage typography ───────── */
 .eyebrow {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
+  gap: 8px 12px;
   margin: 0 0 22px;
   font-family: var(--mono);
   font-size: 12.5px;
@@ -259,10 +260,27 @@ a {
   font-weight: 700;
 }
 
+/* Each part stays on one line; on narrow screens the badge wraps below as a whole. */
+.eyebrow > span {
+  white-space: nowrap;
+}
+
 .eyebrow-rule {
   width: 36px;
   height: 1px;
   background: var(--line);
+}
+
+.eyebrow-badge {
+  padding: 3px 10px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+  white-space: nowrap;
 }
 
 .stage-title {

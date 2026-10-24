@@ -86,6 +86,9 @@ export default function Home() {
                     <span>
                       <T t={stage.period} />
                     </span>
+                    <span className="eyebrow-badge">
+                      <T t={stage.badge} />
+                    </span>
                   </p>
                   <h2 className="stage-title" data-reveal>
                     <Image className="stage-icon" src={stage.icon} alt="" />
