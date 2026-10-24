@@ -2,10 +2,34 @@ import type { Metadata, Viewport } from "next";
 import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
 import "./globals.css";
 
+// Link previews (KakaoTalk, Slack, LinkedIn …) need absolute URLs. The deploy workflow sets
+// NEXT_PUBLIC_SITE_URL for GitHub Pages; Vercel provides its production domain automatically.
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/`
+    : "http://localhost:3000/");
+
+const title = "강주영 · Founder / Product Builder";
+const description =
+  "아티스트를 위한 인프라를 구축하고자 합니다. 육군창업경진대회 본선 진출 및 수상 · 고래코리안 공동창업 · Enactus 회장.";
+
 export const metadata: Metadata = {
-  title: "강주영 Kang Ju Yeong · Ethan",
-  description:
-    "사람들을 즐겁게 하는 제품을 만드는 사람, 강주영의 포트폴리오. Portfolio of Kang Ju Yeong (Ethan) — building products that make people happy.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  alternates: { canonical: "./" },
+  openGraph: {
+    type: "website",
+    url: "./",
+    siteName: "Kang Ju Yeong",
+    title,
+    description,
+    locale: "ko_KR",
+    alternateLocale: ["en_US"],
+    images: [{ url: "og.png", width: 1200, height: 630, alt: "강주영 · Founder / Product Builder" }],
+  },
+  twitter: { card: "summary_large_image", title, description, images: ["og.png"] },
 };
 
 export const viewport: Viewport = {
