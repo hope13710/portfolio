@@ -4,6 +4,10 @@ import profile from "@/assets/profile.webp";
 import iconEnactus from "@/assets/icon-enactus.png";
 import iconGorae from "@/assets/icon-gorae.png";
 import iconTeamnimals from "@/assets/icon-teamnimals.png";
+import iconKracer from "@/assets/icon-kracer.png";
+import kracerMain from "@/assets/kracer-main.webp";
+import kracerField from "@/assets/kracer-field.webp";
+import kracerKakao from "@/assets/kracer-kakao.webp";
 import enactusGroup from "@/assets/enactus-group.webp";
 import enactusPoster from "@/assets/enactus-poster.webp";
 import enactusAiSchool from "@/assets/enactus-aischool.webp";
@@ -318,10 +322,73 @@ export const stages: Stage[] = [
       ],
     },
   },
+  {
+    id: "stage-4",
+    nav: "KRACER",
+    period: { ko: "2026", en: "2026" },
+    badge: { ko: "본선 25팀", en: "Top 25 finalist" },
+    icon: iconKracer,
+    title: { ko: "kracer", en: "kracer" },
+    role: { ko: "대표 · 서비스 기획 · 개발 · 사업계획", en: "Team lead · Product · Development · Business plan" },
+    summary: {
+      ko: "평가 데이터를 다음 교육으로 잇는 AI 교육·평가 운영체제",
+      en: "An AI training and evaluation platform that carries assessment data into the next round of training",
+    },
+    highlights: [
+      {
+        value: { ko: "현장 평가 입력", en: "On-site scoring" },
+        detail: {
+          ko: "조교가 모바일로 실습 평가를 바로 기록 · 시간·체크리스트·등급 입력",
+          en: "Instructors record practical assessments on mobile · time, checklists and grades",
+        },
+      },
+      {
+        value: { ko: "AI 분석 리포트", en: "AI analysis report" },
+        detail: {
+          ko: "회차별 평균·통과율·취약 지표 분석 · 다음 교육 방향 제안",
+          en: "Averages, pass rates and weak metrics per session · suggestions for the next training",
+        },
+      },
+      {
+        value: { ko: "카카오톡 개인 리포트", en: "Personal reports" },
+        detail: {
+          ko: "교육 대상자별 결과와 보완점을 카카오톡으로 전달 · 담당자 검토 후 발송",
+          en: "Each trainee’s results and next steps sent on KakaoTalk · reviewed by staff before sending",
+        },
+      },
+    ],
+    tag: {
+      ko: "2026 제16회 육군창업경진대회 본선 진출",
+      en: "Finalist, 16th ROK Army Startup Competition (2026)",
+    },
+    links: [{ label: { ko: "kracer.app", en: "kracer.app" }, href: "https://kracer.app" }],
+    media: {
+      main: {
+        src: kracerMain,
+        alt: {
+          ko: "kracer — 차세대 AI 교육·평가 운영체제 (배경 사진: 대한민국 육군)",
+          en: "kracer — a next-generation AI training and evaluation platform (background photo: ROK Army)",
+        },
+        caption: { ko: "팀 Re:serve · 육군 39사단 조교 4인", en: "Team Re:serve · four instructors, ROK Army 39th Division" },
+      },
+      inset: [
+        {
+          src: kracerField,
+          alt: { ko: "kracer 현장 평가 입력 화면", en: "kracer on-site scoring screen" },
+          position: "50% 0%",
+        },
+        {
+          src: kracerKakao,
+          alt: { ko: "kracer 카카오톡 개인 리포트 화면", en: "kracer personal report on KakaoTalk" },
+          position: "50% 0%",
+        },
+      ],
+    },
+  },
 ];
 
 export const contact = {
-  id: "stage-4",
+  id: "stage-5",
   nav: "NEXT STAGE",
   headline: {
     ko: "다음 스테이지를 함께할 동료를 찾는 중",
