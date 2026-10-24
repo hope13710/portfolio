@@ -461,6 +461,12 @@ h2.stage-title {
   padding-bottom: 16px;
 }
 
+/* The inset drops below the main picture; reserve that space so it never touches what follows
+   (on phones the text comes right after the images). With a logo row, the row clears it instead. */
+.media-pair:not(:has(.sponsors)) {
+  padding-bottom: var(--drop);
+}
+
 .media-main {
   grid-column: 2;
   grid-row: 1;
