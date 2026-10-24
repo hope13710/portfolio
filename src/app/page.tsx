@@ -163,6 +163,20 @@ export default function Home() {
                     <span className="caption-no">{String(no).padStart(2, "0")}</span>
                     <T t={stage.media.main.caption} />
                   </figcaption>
+                  {stage.sponsors && (
+                    <div className="sponsors">
+                      <p className="sponsors-label">
+                        <T t={stage.sponsors.label} />
+                      </p>
+                      <ul>
+                        {stage.sponsors.logos.map((logo) => (
+                          <li key={logo.name}>
+                            <Image src={logo.src} alt={logo.name} />
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </figure>
               </div>
             </section>

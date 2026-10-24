@@ -5,6 +5,13 @@ import iconEnactus from "@/assets/icon-enactus.png";
 import iconGorae from "@/assets/icon-gorae.png";
 import iconTeamnimals from "@/assets/icon-teamnimals.png";
 import armyStartupLogo from "@/assets/army-startup-logo.png";
+import sponsorArmyHq from "@/assets/sponsors/army-hq.png";
+import sponsorHankyung from "@/assets/sponsors/hankyung.png";
+import sponsorDaejeon from "@/assets/sponsors/daejeon.png";
+import sponsorKosme from "@/assets/sponsors/kosme.png";
+import sponsorKised from "@/assets/sponsors/kised.png";
+import sponsorKyobo from "@/assets/sponsors/kyobo.png";
+import sponsorKoreanAir from "@/assets/sponsors/korean-air.png";
 import kracerMain from "@/assets/kracer-main.webp";
 import kracerField from "@/assets/kracer-field.webp";
 import kracerKakao from "@/assets/kracer-kakao.webp";
@@ -54,6 +61,8 @@ export type Stage = {
   links: { label: L; href: string }[];
   /** On-site photos opened from the link row; each `alt` doubles as the caption. */
   gallery?: Picture[];
+  /** Organizers and sponsors shown under the images, e.g. for a competition. */
+  sponsors?: { label: L; logos: { src: StaticImageData; name: string }[] };
   /** Several inset pictures take turns in the same frame. */
   media: { main: Picture & { caption: L }; inset: Picture | Picture[] };
 };
@@ -363,6 +372,18 @@ export const stages: Stage[] = [
       { label: { ko: "kracer.app", en: "kracer.app" }, href: "https://kracer.app" },
       { label: { ko: "대회 공식 사이트", en: "Competition site" }, href: "https://army-startup.co.kr/" },
     ],
+    sponsors: {
+      label: { ko: "주최·주관·후원", en: "Organizers & sponsors" },
+      logos: [
+        { src: sponsorArmyHq, name: "육군본부 ROK Army Headquarters" },
+        { src: sponsorHankyung, name: "한국경제신문 The Korea Economic Daily" },
+        { src: sponsorDaejeon, name: "대전일자리경제진흥원 Business and Employment Agency of Daejeon" },
+        { src: sponsorKosme, name: "중소벤처기업진흥공단 KOSME" },
+        { src: sponsorKised, name: "창업진흥원 KISED" },
+        { src: sponsorKyobo, name: "교보생명 Kyobo Life" },
+        { src: sponsorKoreanAir, name: "대한항공 Korean Air" },
+      ],
+    },
     media: {
       main: {
         src: kracerMain,
