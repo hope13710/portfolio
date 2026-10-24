@@ -44,9 +44,13 @@ export default function Home() {
               <p className="intro-headline" data-reveal>
                 <T t={profileIntro.headline} />
               </p>
-              <p className="intro-body" data-reveal>
-                <T t={profileIntro.body} />
-              </p>
+              <div className="intro-body" data-reveal>
+                {profileIntro.body.map((paragraph) => (
+                  <p key={paragraph.en}>
+                    <T t={paragraph} />
+                  </p>
+                ))}
+              </div>
               <ul className="chips" data-reveal>
                 {profileIntro.interests.map((interest) => (
                   <li key={interest.en}>

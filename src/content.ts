@@ -56,13 +56,25 @@ export const profileIntro = {
   name: { ko: "강주영", en: "Kang Ju Yeong" },
   alias: { ko: "Kang Ju Yeong · Ethan", en: "Ethan · 강주영" },
   headline: {
-    ko: "사람들을 즐겁게 하는 제품을 만드는 사람",
-    en: "Building products that make people happy",
+    ko: "사람들을 즐겁게 하는 제품을 만들고자 합니다",
+    en: "I want to build products that make people happy",
   },
-  body: {
-    ko: "인생은 ‘게임’, 사업은 ‘종합예술’. 중학생 시절 첫 온라인 비즈니스부터 창업학회 회장까지, 기획·디자인·개발을 넘나드는 실행. 지금의 목표는 기술과 엔터테인먼트가 만나는 지점에서 전 세계 아티스트를 위한 인프라 구축.",
-    en: "Life is a game; business is a total art form. From a first online business in middle school to leading a startup society, moving freely across planning, design and building. Next goal: infrastructure for artists worldwide, where technology meets entertainment.",
-  },
+  /** Written in full sentences, unlike the noun-ending copy elsewhere: this is a personal greeting. */
+  body: [
+    { ko: "안녕하세요, 강주영입니다.", en: "Hi, I’m Kang Ju Yeong." },
+    {
+      ko: "저는 인생을 ‘게임’으로, 사업을 ‘종합예술’로 정의하고 있으며, IT/AI, 엔터테인먼트에 관심이 있습니다.",
+      en: "I see life as a game and business as a total art form, and I’m drawn to IT/AI and entertainment.",
+    },
+    {
+      ko: "중학생 시절부터 소규모 온라인 비즈니스를 시작해 대학에서는 창업학회 회장으로 활동하며 해커톤과 AI·창업 교육 프로그램을 주최했고, 직접 서비스를 개발해 정부 지원사업 선정과 수상, 유료화까지 경험했습니다.",
+      en: "I started small online businesses in middle school. At university, as president of a startup society, I hosted hackathons and AI and startup education programs, and built my own services, which were selected for government support programs, won awards and reached paying customers.",
+    },
+    {
+      ko: "현재는 기술과 엔터테인먼트가 만나는 지점에서 전 세계 아티스트의 인프라를 구축하는 것을 목표로 하고 있습니다.",
+      en: "Today, my goal is to build infrastructure for artists around the world, where technology meets entertainment.",
+    },
+  ],
   interests: [
     { ko: "IT / AI", en: "IT / AI" },
     { ko: "엔터테인먼트", en: "Entertainment" },
