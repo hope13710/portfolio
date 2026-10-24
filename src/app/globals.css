@@ -398,22 +398,57 @@ a {
   color: var(--accent);
 }
 
-/* ───────── Shared media frames: wide 16:10 main + tall 4:5 inset, same on every stage ───────── */
+/* ───────── Shared media frames: wide 16:10 main + tall 4:5 inset, same on every stage ─────────
+   The inset sits beside the main image's lower-left corner and drops below it,
+   so the two form a diagonal without either covering the other. */
 .stage-media {
   margin: 0;
 }
 
-.media-stack {
-  position: relative;
-  padding: 0 0 13% 15%;
+.media-pair {
+  --drop: 48px;
+  display: grid;
+  grid-template-columns: 27% minmax(0, 1fr);
+  column-gap: 16px;
+  padding-bottom: 16px;
+}
+
+.media-main {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.media-pair figcaption {
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .frame {
   position: relative;
   overflow: hidden;
-  border-radius: 18px;
+  border-radius: 16px;
   background: var(--surface);
   border: 1px solid var(--line);
+}
+
+.frame-zoom {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  border-radius: 16px;
+  cursor: zoom-in;
+}
+
+.frame-zoom .frame {
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.frame-zoom:hover .frame,
+.frame-zoom:focus-visible .frame {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
 }
 
 .frame-wide {
@@ -425,16 +460,10 @@ a {
 }
 
 .media-inset {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 31%;
-}
-
-.media-inset .frame {
-  border-radius: 14px;
-  outline: 6px solid var(--bg);
-  box-shadow: var(--shadow);
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  margin-bottom: calc(-1 * var(--drop));
 }
 
 .stage-media figcaption {
@@ -781,6 +810,81 @@ html.js .stage[data-active] [data-reveal] {
   opacity: 1;
 }
 
-.media-inset .frame-cycle .frame {
-  outline: 6px solid var(--bg);
+/* ───────── Lightbox ───────── */
+.lightbox {
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.lightbox::backdrop {
+  background: rgba(8, 8, 10, 0.86);
+  backdrop-filter: blur(6px);
+}
+
+.lightbox figure {
+  margin: 0;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 14px;
+  padding: 56px 16px 24px;
+  cursor: zoom-out;
+}
+
+.lightbox img {
+  display: block;
+  max-width: min(1400px, 92vw);
+  max-height: calc(100dvh - 140px);
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+}
+
+.lightbox figcaption {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+}
+
+.lightbox-close svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frame-zoom .frame {
+    transition: none;
+  }
+  .frame-zoom:hover .frame,
+  .frame-zoom:focus-visible .frame {
+    transform: none;
+  }
 }

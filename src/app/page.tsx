@@ -1,5 +1,6 @@
 import { Controls } from "@/components/Controls";
 import { Frame, FrameCycle } from "@/components/Frame";
+import { Lightbox } from "@/components/Lightbox";
 import { StageNav } from "@/components/StageNav";
 import { T } from "@/components/T";
 import { contact, profileIntro, stages } from "@/content";
@@ -128,12 +129,12 @@ export default function Home() {
                   </div>
                 </div>
 
-                <figure className="stage-media" data-reveal>
-                  <div className="media-stack">
-                    <Frame picture={stage.media.main} variant="wide" sizes="(max-width: 900px) 90vw, 640px" />
-                    <div className="media-inset">
-                      <FrameCycle pictures={stage.media.inset} variant="tall" sizes="(max-width: 900px) 30vw, 200px" />
-                    </div>
+                <figure className="stage-media media-pair" data-reveal>
+                  <div className="media-main">
+                    <Frame picture={stage.media.main} variant="wide" sizes="(max-width: 900px) 75vw, 560px" zoomable />
+                  </div>
+                  <div className="media-inset">
+                    <FrameCycle pictures={stage.media.inset} variant="tall" sizes="(max-width: 900px) 30vw, 200px" zoomable />
                   </div>
                   <figcaption>
                     <span className="caption-no">{String(no).padStart(2, "0")}</span>
@@ -177,6 +178,8 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      <Lightbox />
     </>
   );
 }
