@@ -110,6 +110,142 @@ export const profileIntro = {
 export const stages: Stage[] = [
   {
     id: "stage-1",
+    nav: "ARMY STARTUP",
+    period: { ko: "2026", en: "2026" },
+    badge: { ko: "본선 진출 및 수상", en: "Finalist & award winner" },
+    titleLogo: armyStartupLogo,
+    title: { ko: "2026 제16회 육군창업경진대회", en: "ROK Army Startup Competition 2026 (16th)" },
+    role: { ko: "팀 Re:serve 대표", en: "Team lead, Team Re:serve" },
+    summary: {
+      ko: "버려지던 훈련 데이터를 AI 리포트로 바꾸는 서비스로 본선(25팀) 진출 및 수상",
+      en: "Reached the top-25 finals and won an award with a service that turns discarded training data into AI reports",
+    },
+    highlights: [
+      {
+        value: { ko: "kracer", en: "kracer" },
+        detail: {
+          ko: "출품작 · 평가 데이터를 다음 교육으로 잇는 AI 교육·평가 운영체제",
+          en: "Our entry · an AI training and evaluation platform that carries assessment data into the next training",
+        },
+      },
+      {
+        value: { ko: "조교 4인 팀", en: "Team of four" },
+        detail: {
+          ko: "육군 39사단 합천예비군훈련대 조교로 팀 구성 · 대표로 기획·개발·사업계획 총괄",
+          en: "Instructors at the 39th Division reserve training unit · led product, development and the business plan",
+        },
+      },
+      {
+        value: { ko: "실서비스 구현", en: "Working product" },
+        detail: {
+          ko: "현장 평가 입력 · AI 분석 리포트 · 카카오톡 개인 리포트까지 작동",
+          en: "On-site scoring, AI analysis reports and KakaoTalk personal reports, all working",
+        },
+      },
+    ],
+    links: [
+      { label: { ko: "kracer.app", en: "kracer.app" }, href: "https://kracer.app" },
+      { label: { ko: "대회 공식 사이트", en: "Competition site" }, href: "https://army-startup.co.kr/" },
+    ],
+    sponsors: {
+      label: { ko: "주최·주관·후원", en: "Organizers & sponsors" },
+      logos: [
+        { src: sponsorArmyHq, name: "육군본부 ROK Army Headquarters" },
+        { src: sponsorHankyung, name: "한국경제신문 The Korea Economic Daily" },
+        { src: sponsorDaejeon, name: "대전일자리경제진흥원 Business and Employment Agency of Daejeon" },
+        { src: sponsorKosme, name: "중소벤처기업진흥공단 KOSME" },
+        { src: sponsorKised, name: "창업진흥원 KISED" },
+        { src: sponsorKyobo, name: "교보생명 Kyobo Life" },
+        { src: sponsorKoreanAir, name: "대한항공 Korean Air" },
+      ],
+    },
+    media: {
+      main: {
+        src: kracerMain,
+        alt: {
+          ko: "kracer — 차세대 AI 교육·평가 운영체제 (배경 사진: 대한민국 육군)",
+          en: "kracer — a next-generation AI training and evaluation platform (background photo: ROK Army)",
+        },
+        caption: { ko: "출품작 kracer · 팀 Re:serve", en: "Entry: kracer · Team Re:serve" },
+      },
+    },
+  },
+  {
+    id: "stage-2",
+    nav: "GORAE KOREAN",
+    period: { ko: "2024.04 – 2025.08", en: "Apr 2024 – Aug 2025" },
+    badge: { ko: "수상·선정 6건", en: "6 awards & selections" },
+    icon: iconGorae,
+    title: { ko: "고래코리안", en: "Gorae Korean" },
+    role: { ko: "공동창업자 · 서비스 기획 · UX/UI · 노코드 개발", en: "Co-founder · Product · UX/UI · No-code" },
+    summary: {
+      ko: "한국의 한부모 가정과 해외 학습자를 잇는 실용 한국어 회화 플랫폼",
+      en: "A practical Korean conversation platform connecting single-parent families in Korea with learners abroad",
+    },
+    highlights: [
+      {
+        value: { ko: "7일 · 200명", en: "200 in 7 days" },
+        detail: {
+          ko: "인스타그램 무료 수업 모집으로 시장 반응 검증",
+          en: "Validated demand through free Instagram classes",
+        },
+      },
+      {
+        value: { ko: "유료 학생 80명", en: "80 paying students" },
+        detail: {
+          ko: "Bubble 기반 웹 MVP · 자체 교재 제작 · 미혼모 튜터 2명 고용까지 수익화",
+          en: "Bubble-built web MVP · in-house materials · two single mothers hired as paid tutors",
+        },
+      },
+      {
+        value: { ko: "MOU 체결", en: "MOU signed" },
+        detail: {
+          ko: "(사)한국미혼모가족협회와 업무협약 · 언론 보도",
+          en: "With the Korean Unwed Mothers’ Families Association · in the press",
+        },
+      },
+      {
+        value: { ko: "수상", en: "Awards" },
+        detail: [
+          {
+            ko: "중소벤처기업부 예비창업패키지 사전 인큐베이팅 우수예비기업",
+            en: "Ministry of SMEs Pre-Startup Package — top team",
+          },
+          { ko: "현대해상 씨앗 프로그램 4위", en: "Hyundai Marine & Fire Seed Program — 4th" },
+          { ko: "SDGs 소셜벤처 챔피언십 금상", en: "SDGs Social Venture Championship — Gold" },
+          { ko: "시기적절 창업대회 장려상", en: "Sigijeokjeol Startup Competition — Honorable Mention" },
+          { ko: "서울시립대 여름 창업경진대회 최우수상", en: "UOS Summer Startup Competition — Top Prize" },
+          { ko: "서울시립대 캠퍼스타운 입주기업 선정", en: "UOS Campus Town — selected startup" },
+        ],
+      },
+    ],
+    links: [
+      { label: { ko: "goraekorean.site", en: "goraekorean.site" }, href: "https://goraekorean.site" },
+      { label: { ko: "MOU 기사", en: "MOU press" }, href: "https://www.startupdaily.kr/news/articleView.html?idxno=6454" },
+    ],
+    sponsors: {
+      label: { ko: "수상·선정", en: "Awards & selections" },
+      logos: [
+        { src: awardHyundaiMarine, name: "현대해상 Hyundai Marine & Fire Insurance" },
+        { src: awardCompa, name: "과학기술사업화진흥원 COMPA" },
+        { src: awardSeoulImpact, name: "서울시립대 캠퍼스타운 SEOUL IMPACT" },
+      ],
+    },
+    media: {
+      main: {
+        src: goraeApp,
+        alt: { ko: "온라인 실용 한국어 회화 플랫폼 고래코리안", en: "Gorae Korean, an online platform for practical Korean conversation" },
+        caption: { ko: "고래코리안 서비스 화면", en: "Gorae Korean app" },
+      },
+      inset: {
+        src: goraeWeb,
+        alt: { ko: "고래코리안 웹사이트 화면", en: "Gorae Korean website" },
+        position: "50% 0%",
+      },
+    },
+  },
+  {
+    id: "stage-3",
     nav: "ENACTUS",
     period: { ko: "2025", en: "2025" },
     badge: { ko: "행사 8회 개최", en: "8 events hosted" },
@@ -214,81 +350,7 @@ export const stages: Stage[] = [
     },
   },
   {
-    id: "stage-2",
-    nav: "GORAE KOREAN",
-    period: { ko: "2024.04 – 2025.08", en: "Apr 2024 – Aug 2025" },
-    badge: { ko: "수상·선정 6건", en: "6 awards & selections" },
-    icon: iconGorae,
-    title: { ko: "고래코리안", en: "Gorae Korean" },
-    role: { ko: "공동창업자 · 서비스 기획 · UX/UI · 노코드 개발", en: "Co-founder · Product · UX/UI · No-code" },
-    summary: {
-      ko: "한국의 한부모 가정과 해외 학습자를 잇는 실용 한국어 회화 플랫폼",
-      en: "A practical Korean conversation platform connecting single-parent families in Korea with learners abroad",
-    },
-    highlights: [
-      {
-        value: { ko: "7일 · 200명", en: "200 in 7 days" },
-        detail: {
-          ko: "인스타그램 무료 수업 모집으로 시장 반응 검증",
-          en: "Validated demand through free Instagram classes",
-        },
-      },
-      {
-        value: { ko: "유료 학생 80명", en: "80 paying students" },
-        detail: {
-          ko: "Bubble 기반 웹 MVP · 자체 교재 제작 · 미혼모 튜터 2명 고용까지 수익화",
-          en: "Bubble-built web MVP · in-house materials · two single mothers hired as paid tutors",
-        },
-      },
-      {
-        value: { ko: "MOU 체결", en: "MOU signed" },
-        detail: {
-          ko: "(사)한국미혼모가족협회와 업무협약 · 언론 보도",
-          en: "With the Korean Unwed Mothers’ Families Association · in the press",
-        },
-      },
-      {
-        value: { ko: "수상", en: "Awards" },
-        detail: [
-          {
-            ko: "중소벤처기업부 예비창업패키지 사전 인큐베이팅 우수예비기업",
-            en: "Ministry of SMEs Pre-Startup Package — top team",
-          },
-          { ko: "현대해상 씨앗 프로그램 4위", en: "Hyundai Marine & Fire Seed Program — 4th" },
-          { ko: "SDGs 소셜벤처 챔피언십 금상", en: "SDGs Social Venture Championship — Gold" },
-          { ko: "시기적절 창업대회 장려상", en: "Sigijeokjeol Startup Competition — Honorable Mention" },
-          { ko: "서울시립대 여름 창업경진대회 최우수상", en: "UOS Summer Startup Competition — Top Prize" },
-          { ko: "서울시립대 캠퍼스타운 입주기업 선정", en: "UOS Campus Town — selected startup" },
-        ],
-      },
-    ],
-    links: [
-      { label: { ko: "goraekorean.site", en: "goraekorean.site" }, href: "https://goraekorean.site" },
-      { label: { ko: "MOU 기사", en: "MOU press" }, href: "https://www.startupdaily.kr/news/articleView.html?idxno=6454" },
-    ],
-    sponsors: {
-      label: { ko: "수상·선정", en: "Awards & selections" },
-      logos: [
-        { src: awardHyundaiMarine, name: "현대해상 Hyundai Marine & Fire Insurance" },
-        { src: awardCompa, name: "과학기술사업화진흥원 COMPA" },
-        { src: awardSeoulImpact, name: "서울시립대 캠퍼스타운 SEOUL IMPACT" },
-      ],
-    },
-    media: {
-      main: {
-        src: goraeApp,
-        alt: { ko: "온라인 실용 한국어 회화 플랫폼 고래코리안", en: "Gorae Korean, an online platform for practical Korean conversation" },
-        caption: { ko: "고래코리안 서비스 화면", en: "Gorae Korean app" },
-      },
-      inset: {
-        src: goraeWeb,
-        alt: { ko: "고래코리안 웹사이트 화면", en: "Gorae Korean website" },
-        position: "50% 0%",
-      },
-    },
-  },
-  {
-    id: "stage-3",
+    id: "stage-4",
     nav: "TEAMNIMALS",
     period: { ko: "2025", en: "2025" },
     badge: { ko: "재학생 1/8 사용", en: "Used by 1 in 8 students" },
@@ -341,68 +403,6 @@ export const stages: Stage[] = [
           alt: { ko: "팀니멀즈 실제 SNS 바이럴 후기", en: "Real Teamnimals shares on social media" },
         },
       ],
-    },
-  },
-  {
-    id: "stage-4",
-    nav: "ARMY STARTUP",
-    period: { ko: "2026", en: "2026" },
-    badge: { ko: "본선 진출 및 수상", en: "Finalist & award winner" },
-    titleLogo: armyStartupLogo,
-    title: { ko: "2026 제16회 육군창업경진대회", en: "ROK Army Startup Competition 2026 (16th)" },
-    role: { ko: "팀 Re:serve 대표", en: "Team lead, Team Re:serve" },
-    summary: {
-      ko: "버려지던 훈련 데이터를 AI 리포트로 바꾸는 서비스로 본선(25팀) 진출 및 수상",
-      en: "Reached the top-25 finals and won an award with a service that turns discarded training data into AI reports",
-    },
-    highlights: [
-      {
-        value: { ko: "kracer", en: "kracer" },
-        detail: {
-          ko: "출품작 · 평가 데이터를 다음 교육으로 잇는 AI 교육·평가 운영체제",
-          en: "Our entry · an AI training and evaluation platform that carries assessment data into the next training",
-        },
-      },
-      {
-        value: { ko: "조교 4인 팀", en: "Team of four" },
-        detail: {
-          ko: "육군 39사단 합천예비군훈련대 조교로 팀 구성 · 대표로 기획·개발·사업계획 총괄",
-          en: "Instructors at the 39th Division reserve training unit · led product, development and the business plan",
-        },
-      },
-      {
-        value: { ko: "실서비스 구현", en: "Working product" },
-        detail: {
-          ko: "현장 평가 입력 · AI 분석 리포트 · 카카오톡 개인 리포트까지 작동",
-          en: "On-site scoring, AI analysis reports and KakaoTalk personal reports, all working",
-        },
-      },
-    ],
-    links: [
-      { label: { ko: "kracer.app", en: "kracer.app" }, href: "https://kracer.app" },
-      { label: { ko: "대회 공식 사이트", en: "Competition site" }, href: "https://army-startup.co.kr/" },
-    ],
-    sponsors: {
-      label: { ko: "주최·주관·후원", en: "Organizers & sponsors" },
-      logos: [
-        { src: sponsorArmyHq, name: "육군본부 ROK Army Headquarters" },
-        { src: sponsorHankyung, name: "한국경제신문 The Korea Economic Daily" },
-        { src: sponsorDaejeon, name: "대전일자리경제진흥원 Business and Employment Agency of Daejeon" },
-        { src: sponsorKosme, name: "중소벤처기업진흥공단 KOSME" },
-        { src: sponsorKised, name: "창업진흥원 KISED" },
-        { src: sponsorKyobo, name: "교보생명 Kyobo Life" },
-        { src: sponsorKoreanAir, name: "대한항공 Korean Air" },
-      ],
-    },
-    media: {
-      main: {
-        src: kracerMain,
-        alt: {
-          ko: "kracer — 차세대 AI 교육·평가 운영체제 (배경 사진: 대한민국 육군)",
-          en: "kracer — a next-generation AI training and evaluation platform (background photo: ROK Army)",
-        },
-        caption: { ko: "출품작 kracer · 팀 Re:serve", en: "Entry: kracer · Team Re:serve" },
-      },
     },
   },
 ];
