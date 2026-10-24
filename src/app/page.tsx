@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Controls } from "@/components/Controls";
 import { Frame, FrameCycle } from "@/components/Frame";
+import { GalleryButton } from "@/components/GalleryButton";
 import { Lightbox } from "@/components/Lightbox";
 import { StageNav } from "@/components/StageNav";
 import { T } from "@/components/T";
@@ -129,6 +130,7 @@ export default function Home() {
                         <span aria-hidden="true">↗</span>
                       </a>
                     ))}
+                    {stage.gallery && <GalleryButton pictures={stage.gallery} />}
                   </div>
                 </div>
 

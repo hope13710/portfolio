@@ -38,7 +38,7 @@ export function Frame({ picture, variant, sizes, priority, zoomable }: FrameProp
       type="button"
       className="frame-zoom"
       aria-label={lang === "ko" ? `${picture.alt.ko} 크게 보기` : `Enlarge: ${picture.alt.en}`}
-      onClick={() => openLightbox(picture, lang)}
+      onClick={() => openLightbox([picture], 0, lang)}
     >
       {frame}
     </button>

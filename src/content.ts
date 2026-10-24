@@ -7,6 +7,14 @@ import iconTeamnimals from "@/assets/icon-teamnimals.png";
 import enactusGroup from "@/assets/enactus-group.webp";
 import enactusPoster from "@/assets/enactus-poster.webp";
 import enactusAiSchool from "@/assets/enactus-aischool.webp";
+import enactusGallery01 from "@/assets/gallery/enactus-01.webp";
+import enactusGallery02 from "@/assets/gallery/enactus-02.webp";
+import enactusGallery03 from "@/assets/gallery/enactus-03.webp";
+import enactusGallery04 from "@/assets/gallery/enactus-04.webp";
+import enactusGallery05 from "@/assets/gallery/enactus-05.webp";
+import enactusGallery06 from "@/assets/gallery/enactus-06.webp";
+import enactusGallery07 from "@/assets/gallery/enactus-07.webp";
+import enactusGallery08 from "@/assets/gallery/enactus-08.webp";
 import goraeWeb from "@/assets/gorae-web.webp";
 import goraeApp from "@/assets/gorae-app.webp";
 import teamnimalsScreens from "@/assets/teamnimals-screens.webp";
@@ -36,6 +44,8 @@ export type Stage = {
   highlights: { value: L; detail: L | L[] }[];
   tag?: L;
   links: { label: L; href: string }[];
+  /** On-site photos opened from the link row; each `alt` doubles as the caption. */
+  gallery?: Picture[];
   /** Several inset pictures take turns in the same frame. */
   media: { main: Picture & { caption: L }; inset: Picture | Picture[] };
 };
@@ -108,6 +118,49 @@ export const stages: Stage[] = [
     links: [
       { label: { ko: "Instagram", en: "Instagram" }, href: "https://www.instagram.com/enactus_uos_" },
       { label: { ko: "해커톤 기사", en: "Hackathon press" }, href: "https://www.joongang.co.kr/article/25387687" },
+    ],
+    gallery: [
+      {
+        src: enactusGallery01,
+        alt: { ko: "2025.11 SEOUL:ution 해커톤 — 참가자 단체사진", en: "Nov 2025 · SEOUL:ution Hackathon — all participants" },
+      },
+      {
+        src: enactusGallery02,
+        alt: { ko: "2025.11 SEOUL:ution 해커톤 — 1박 2일 개발 현장", en: "Nov 2025 · SEOUL:ution Hackathon — the overnight build" },
+      },
+      {
+        src: enactusGallery03,
+        alt: {
+          ko: "2025.06 ㈜캥스터즈 조정흠 부대표 초청 특강 — 캠퍼스타운 역대 최대 참석",
+          en: "Jun 2025 · Talk with Kangsters’ vice CEO — Campus Town’s best-attended talk",
+        },
+      },
+      {
+        src: enactusGallery04,
+        alt: {
+          ko: "2025.09 캠퍼스타운 ‘AI SCHOOL’ 수업 현장 (사진: 서울시립대)",
+          en: "Sep 2025 · Campus Town ‘AI SCHOOL’ class (photo: University of Seoul)",
+        },
+      },
+      {
+        src: enactusGallery05,
+        alt: { ko: "2025.10 전국 7개 대학 연합 아이디어톤 — 대상", en: "Oct 2025 · Seven-university ideathon — Grand Prize" },
+      },
+      {
+        src: enactusGallery06,
+        alt: { ko: "2025.04 강북지부 4개 대학 연합 아이디어톤", en: "Apr 2025 · Four-university ideathon, Gangbuk chapter" },
+      },
+      {
+        src: enactusGallery07,
+        alt: {
+          ko: "2025.05 고려대·성균관대·시립대·한국외대 연합 네트워킹 (약 100명)",
+          en: "May 2025 · Four-university networking night (~100 people)",
+        },
+      },
+      {
+        src: enactusGallery08,
+        alt: { ko: "2025.10 딥디퍼 신동혁 대표 초청 강연", en: "Oct 2025 · Talk with Deep Diper CEO Shin Dong-hyuk" },
+      },
     ],
     media: {
       main: {
