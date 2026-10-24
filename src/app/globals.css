@@ -35,7 +35,7 @@ html[data-theme="dark"] {
 /* ───────── Language switch (see components/T.tsx) ───────── */
 html[data-lang="ko"] [data-l="en"],
 html[data-lang="en"] [data-l="ko"] {
-  display: none;
+  display: none !important;
 }
 
 /* ───────── Base + scroll snapping: one stage per stop ───────── */
@@ -321,6 +321,48 @@ a {
   color: var(--muted);
 }
 
+.highlights .highlight-wide {
+  grid-column: 1 / -1;
+}
+
+.highlights .highlight-list {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  columns: 2;
+  column-gap: 28px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+/* The li > span rule above would otherwise turn each language span into a block. */
+.highlights .highlight-list li {
+  border-top: 0;
+  padding: 0 0 0 10px;
+  margin-top: 4px;
+  position: relative;
+  display: block;
+  break-inside: avoid;
+}
+
+.highlights .highlight-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.highlights .highlight-list span {
+  display: inline;
+  margin: 0;
+  font-size: inherit;
+}
+
 .stage-foot {
   margin-top: 28px;
   display: flex;
@@ -581,6 +623,36 @@ html.js .stage[data-active] [data-reveal] {
   }
 }
 
+/* ───────── Short laptop screens: tighten vertical rhythm so each stage fits one screen ───────── */
+@media (min-width: 901px) and (max-height: 820px) {
+  .stage {
+    padding-top: calc(var(--header-h) + 8px);
+    padding-bottom: 24px;
+  }
+
+  .eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .stage-title {
+    font-size: clamp(32px, 3.8vw, 48px);
+  }
+
+  .stage-role,
+  .stage-summary {
+    margin-top: 10px;
+  }
+
+  .highlights {
+    margin-top: 20px;
+    gap: 14px 20px;
+  }
+
+  .stage-foot {
+    margin-top: 18px;
+  }
+}
+
 /* ───────── Small laptop / tablet landscape ───────── */
 @media (max-width: 1200px) {
   .stage {
@@ -614,6 +686,11 @@ html.js .stage[data-active] [data-reveal] {
 
   .highlights span {
     margin-top: 1px;
+  }
+
+  .highlights .highlight-list {
+    columns: 1;
+    margin-top: 0;
   }
 }
 

@@ -25,7 +25,8 @@ export type Stage = {
   title: L;
   role: L;
   summary: L;
-  highlights: { value: L; detail: L }[];
+  /** A list `detail` renders as a full-width row below the others, one item per line. */
+  highlights: { value: L; detail: L | L[] }[];
   tag?: L;
   links: { label: L; href: string }[];
   media: { main: Picture & { caption: L }; inset: Picture };
@@ -62,7 +63,7 @@ export const stages: Stage[] = [
     id: "stage-1",
     nav: "ENACTUS",
     period: { ko: "2025", en: "2025" },
-    title: { ko: "인액터스 서울시립대", en: "Enactus UOS" },
+    title: { ko: "Enactus", en: "Enactus" },
     role: { ko: "회장", en: "President" },
     summary: {
       ko: "서울시립대 중앙 실전창업학회 운영 총괄",
@@ -103,7 +104,7 @@ export const stages: Stage[] = [
       main: {
         src: enactusGroup,
         alt: { ko: "2025 인액터스 서울시립대 단체사진", en: "Enactus UOS 2025 group photo" },
-        caption: { ko: "2025 인액터스 서울시립대", en: "Enactus UOS, 2025" },
+        caption: { ko: "2025 Enactus", en: "Enactus, 2025" },
         position: "50% 40%",
       },
       inset: {
@@ -139,11 +140,25 @@ export const stages: Stage[] = [
         },
       },
       {
-        value: { ko: "금상", en: "Gold Prize" },
+        value: { ko: "MOU 체결", en: "MOU signed" },
         detail: {
-          ko: "SDGs 소셜벤처 챔피언십 · 예비창업패키지 사전 인큐베이팅 우수기업 · 한국미혼모가족협회 MOU",
-          en: "SDGs Social Venture Championship · top pre-incubation team · MOU with the Korean Unwed Mothers’ Families Association",
+          ko: "(사)한국미혼모가족협회와 업무협약 · 언론 보도",
+          en: "With the Korean Unwed Mothers’ Families Association · in the press",
         },
+      },
+      {
+        value: { ko: "수상", en: "Awards" },
+        detail: [
+          {
+            ko: "중소벤처기업부 예비창업패키지 사전 인큐베이팅 우수예비기업",
+            en: "Ministry of SMEs Pre-Startup Package — top team",
+          },
+          { ko: "현대해상 씨앗 프로그램 4위", en: "Hyundai Marine & Fire Seed Program — 4th" },
+          { ko: "SDGs 소셜벤처 챔피언십 금상", en: "SDGs Social Venture Championship — Gold" },
+          { ko: "시기적절 창업대회 장려상", en: "Sigijeokjeol Startup Competition — Honorable Mention" },
+          { ko: "서울시립대 여름 창업경진대회 최우수상", en: "UOS Summer Startup Competition — Top Prize" },
+          { ko: "서울시립대 캠퍼스타운 입주기업 선정", en: "UOS Campus Town — selected startup" },
+        ],
       },
     ],
     links: [
@@ -152,15 +167,14 @@ export const stages: Stage[] = [
     ],
     media: {
       main: {
-        src: goraeWeb,
-        alt: { ko: "고래코리안 웹사이트 화면", en: "Gorae Korean website" },
-        caption: { ko: "goraekorean.site", en: "goraekorean.site" },
-        position: "50% 0%",
-      },
-      inset: {
         src: goraeApp,
         alt: { ko: "고래코리안 서비스 화면", en: "Gorae Korean app screens" },
-        position: "80% 50%",
+        caption: { ko: "고래코리안 서비스 화면", en: "Gorae Korean app" },
+      },
+      inset: {
+        src: goraeWeb,
+        alt: { ko: "고래코리안 웹사이트 화면", en: "Gorae Korean website" },
+        position: "50% 0%",
       },
     },
   },
@@ -200,14 +214,15 @@ export const stages: Stage[] = [
     links: [{ label: { ko: "teamnimals.me", en: "teamnimals.me" }, href: "https://teamnimals.me" }],
     media: {
       main: {
-        src: teamnimalsScreens,
-        alt: { ko: "팀니멀즈 AI 팀 궁합 분석 화면", en: "Teamnimals AI team-chemistry screens" },
-        caption: { ko: "AI 팀 궁합 분석", en: "AI team-chemistry analysis" },
-      },
-      inset: {
         src: teamnimalsApp,
         alt: { ko: "팀니멀즈 성향 테스트 화면", en: "Teamnimals personality test screens" },
-        position: "84% 50%",
+        caption: { ko: "팀플 성향 테스트", en: "Team-play personality test" },
+        position: "0% 50%",
+      },
+      inset: {
+        src: teamnimalsScreens,
+        alt: { ko: "팀니멀즈 AI 팀 궁합 분석 화면", en: "Teamnimals AI team-chemistry screens" },
+        position: "65% 50%",
       },
     },
   },

@@ -91,13 +91,23 @@ export default function Home() {
 
                   <ol className="highlights" data-reveal>
                     {stage.highlights.map((h) => (
-                      <li key={h.value.en}>
+                      <li key={h.value.en} className={Array.isArray(h.detail) ? "highlight-wide" : undefined}>
                         <strong>
                           <T t={h.value} />
                         </strong>
-                        <span>
-                          <T t={h.detail} />
-                        </span>
+                        {Array.isArray(h.detail) ? (
+                          <ul className="highlight-list">
+                            {h.detail.map((item) => (
+                              <li key={item.en}>
+                                <T t={item} />
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <span>
+                            <T t={h.detail} />
+                          </span>
+                        )}
                       </li>
                     ))}
                   </ol>
