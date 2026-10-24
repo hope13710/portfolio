@@ -471,17 +471,16 @@ h2.stage-title {
   grid-row: 2;
 }
 
-/* Organizer/sponsor logos: one muted monochrome row under the images; full colour on hover (light theme). */
+/* Organizer/sponsor logos in their original colours on a white card (like the official banner);
+   white logos in dark mode. */
 .sponsors {
   grid-column: 1 / -1;
   grid-row: 3;
-  margin-top: 40px;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
+  margin-top: 36px;
 }
 
 .sponsors-label {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   font-family: var(--mono);
   font-size: 11.5px;
   letter-spacing: 0.06em;
@@ -491,35 +490,30 @@ h2.stage-title {
 .sponsors ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 14px 18px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px 22px;
+  justify-content: center;
+  gap: 14px 28px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
 }
 
 .sponsors img {
   display: block;
-  height: 17px;
+  height: 22px;
   width: auto;
-  filter: grayscale(1);
-  opacity: 0.6;
-  transition: filter 0.2s ease, opacity 0.2s ease;
 }
 
-.sponsors li:hover img {
-  filter: none;
-  opacity: 1;
+/* Dark mode: white logos on a transparent card. */
+html[data-theme="dark"] .sponsors ul {
+  background: transparent;
 }
 
-html[data-theme="dark"] .sponsors img,
-html[data-theme="dark"] .sponsors li:hover img {
+html[data-theme="dark"] .sponsors img {
   filter: brightness(0) invert(1);
-  opacity: 0.6;
-}
-
-html[data-theme="dark"] .sponsors li:hover img {
-  opacity: 0.9;
 }
 
 .frame {
