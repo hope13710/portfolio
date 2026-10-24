@@ -1,5 +1,5 @@
 import { Controls } from "@/components/Controls";
-import { Frame } from "@/components/Frame";
+import { Frame, FrameCycle } from "@/components/Frame";
 import { StageNav } from "@/components/StageNav";
 import { T } from "@/components/T";
 import { contact, profileIntro, stages } from "@/content";
@@ -132,7 +132,7 @@ export default function Home() {
                   <div className="media-stack">
                     <Frame picture={stage.media.main} variant="wide" sizes="(max-width: 900px) 90vw, 640px" />
                     <div className="media-inset">
-                      <Frame picture={stage.media.inset} variant="tall" sizes="(max-width: 900px) 30vw, 200px" />
+                      <FrameCycle pictures={stage.media.inset} variant="tall" sizes="(max-width: 900px) 30vw, 200px" />
                     </div>
                   </div>
                   <figcaption>

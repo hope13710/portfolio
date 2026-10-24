@@ -3,6 +3,7 @@ import type { StaticImageData } from "next/image";
 import profile from "@/assets/profile.webp";
 import enactusGroup from "@/assets/enactus-group.webp";
 import enactusPoster from "@/assets/enactus-poster.webp";
+import enactusAiSchool from "@/assets/enactus-aischool.webp";
 import goraeWeb from "@/assets/gorae-web.webp";
 import goraeApp from "@/assets/gorae-app.webp";
 import teamnimalsScreens from "@/assets/teamnimals-screens.webp";
@@ -29,7 +30,8 @@ export type Stage = {
   highlights: { value: L; detail: L | L[] }[];
   tag?: L;
   links: { label: L; href: string }[];
-  media: { main: Picture & { caption: L }; inset: Picture };
+  /** Several inset pictures take turns in the same frame. */
+  media: { main: Picture & { caption: L }; inset: Picture | Picture[] };
 };
 
 export const profileIntro = {
@@ -107,11 +109,18 @@ export const stages: Stage[] = [
         caption: { ko: "2025 Enactus", en: "Enactus, 2025" },
         position: "50% 40%",
       },
-      inset: {
-        src: enactusPoster,
-        alt: { ko: "SEOUL:ution 해커톤 포스터", en: "SEOUL:ution Hackathon poster" },
-        position: "50% 0%",
-      },
+      inset: [
+        {
+          src: enactusPoster,
+          alt: { ko: "SEOUL:ution 해커톤 포스터", en: "SEOUL:ution Hackathon poster" },
+          position: "50% 0%",
+        },
+        {
+          src: enactusAiSchool,
+          alt: { ko: "2025 서울시립대 캠퍼스타운 AI SCHOOL 포스터", en: "2025 UOS Campus Town AI SCHOOL poster" },
+          position: "50% 0%",
+        },
+      ],
     },
   },
   {

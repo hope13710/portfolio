@@ -765,3 +765,22 @@ html.js .stage[data-active] [data-reveal] {
     gap: 4px;
   }
 }
+
+/* ───────── Inset pictures taking turns (see FrameCycle) ───────── */
+.frame-cycle {
+  display: grid;
+}
+
+.frame-cycle-item {
+  grid-area: 1 / 1;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.frame-cycle-item[data-shown="true"] {
+  opacity: 1;
+}
+
+.media-inset .frame-cycle .frame {
+  outline: 6px solid var(--bg);
+}
