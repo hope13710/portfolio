@@ -152,13 +152,15 @@ export default function Home() {
                   </div>
                 </div>
 
-                <figure className="stage-media media-pair" data-reveal>
+                <figure className={`stage-media media-pair${stage.media.inset ? "" : " media-solo"}`} data-reveal>
                   <div className="media-main">
-                    <Frame picture={stage.media.main} variant="wide" sizes="(max-width: 900px) 75vw, 560px" zoomable />
+                    <Frame picture={stage.media.main} variant="wide" sizes="(max-width: 900px) 90vw, 680px" zoomable />
                   </div>
-                  <div className="media-inset">
-                    <FrameCycle pictures={stage.media.inset} variant="tall" sizes="(max-width: 900px) 30vw, 200px" zoomable />
-                  </div>
+                  {stage.media.inset && (
+                    <div className="media-inset">
+                      <FrameCycle pictures={stage.media.inset} variant="tall" sizes="(max-width: 900px) 30vw, 200px" zoomable />
+                    </div>
+                  )}
                   <figcaption>
                     <span className="caption-no">{String(no).padStart(2, "0")}</span>
                     <T t={stage.media.main.caption} />

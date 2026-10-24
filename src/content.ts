@@ -16,8 +16,6 @@ import awardHyundaiMarine from "@/assets/sponsors/hyundai-marine.png";
 import awardSeoulImpact from "@/assets/sponsors/seoul-impact.png";
 import awardCompa from "@/assets/sponsors/compa.png";
 import kracerMain from "@/assets/kracer-main.webp";
-import kracerField from "@/assets/kracer-field.webp";
-import kracerKakao from "@/assets/kracer-kakao.webp";
 import enactusGroup from "@/assets/enactus-group.webp";
 import enactusPoster from "@/assets/enactus-poster.webp";
 import enactusAiSchool from "@/assets/enactus-aischool.webp";
@@ -67,7 +65,8 @@ export type Stage = {
   /** Logos shown under the images: a competition's organizers and sponsors, or the programs behind awards. */
   sponsors?: { label: L; logos: { src: StaticImageData; name: string }[] };
   /** Several inset pictures take turns in the same frame. */
-  media: { main: Picture & { caption: L }; inset: Picture | Picture[] };
+  /** Without an inset, the main picture takes the full width of the media column. */
+  media: { main: Picture & { caption: L }; inset?: Picture | Picture[] };
 };
 
 export const profileIntro = {
@@ -404,18 +403,6 @@ export const stages: Stage[] = [
         },
         caption: { ko: "출품작 kracer · 팀 Re:serve", en: "Entry: kracer · Team Re:serve" },
       },
-      inset: [
-        {
-          src: kracerField,
-          alt: { ko: "kracer 현장 평가 입력 화면", en: "kracer on-site scoring screen" },
-          position: "50% 0%",
-        },
-        {
-          src: kracerKakao,
-          alt: { ko: "kracer 카카오톡 개인 리포트 화면", en: "kracer personal report on KakaoTalk" },
-          position: "50% 0%",
-        },
-      ],
     },
   },
 ];

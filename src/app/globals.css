@@ -471,6 +471,22 @@ h2.stage-title {
   grid-row: 2;
 }
 
+/* A stage without an inset: the main picture, caption and logos span the whole media column. */
+.media-solo {
+  grid-template-columns: minmax(0, 1fr);
+  padding-bottom: 0;
+}
+
+.media-solo .media-main,
+.media-solo figcaption,
+.media-solo .sponsors {
+  grid-column: 1;
+}
+
+.media-solo .sponsors {
+  margin-top: 24px;
+}
+
 /* Organizer/sponsor logos in their original colours on a white card (like the official banner);
    white logos in dark mode. */
 .sponsors {
@@ -505,6 +521,17 @@ h2.stage-title {
   display: block;
   height: 22px;
   width: auto;
+}
+
+/* On desktop, slightly smaller logos so seven of them fit in two rows. */
+@media (min-width: 901px) {
+  .sponsors ul {
+    gap: 14px 20px;
+  }
+
+  .sponsors img {
+    height: clamp(16px, 1.45vw, 21px);
+  }
 }
 
 /* Dark mode: white logos on a transparent card. */
@@ -813,7 +840,7 @@ html.js .stage[data-active] [data-reveal] {
 }
 
 /* Below this width the stage names would run into the images; keep just the dots. */
-@media (max-width: 1360px) {
+@media (max-width: 1439px) {
   .stage-nav-label {
     display: none;
   }
