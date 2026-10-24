@@ -88,31 +88,31 @@ export const profileIntro = {
     { ko: "안녕하세요, 강주영입니다.", en: "Hi, I’m Kang Ju Yeong." },
     {
       ko: "저는 인생을 ‘게임’으로, 사업을 ‘종합예술’로 정의하고 있으며, IT/AI, 엔터테인먼트에 관심이 있습니다.",
-      en: "I see life as a game and business as a total art form, and I’m drawn to IT/AI and entertainment.",
+      en: "I see life as a game, and business as an art form where every discipline comes together. I’m most drawn to tech, AI and entertainment.",
     },
     {
       ko: "중학생 시절부터 소규모 온라인 비즈니스를 시작해 대학에서는 창업학회 회장으로 활동하며 해커톤과 AI·창업 교육 프로그램을 주최했고, 직접 서비스를 개발해 정부 지원사업 선정과 수상, 유료화까지 경험했습니다.",
-      en: "I started small online businesses in middle school. At university, as president of a startup society, I hosted hackathons and AI and startup education programs, and built my own services, which were selected for government support programs, won awards and reached paying customers.",
+      en: "I started running small online businesses in middle school. In college, I led my university’s startup society, hosting hackathons and AI and entrepreneurship programs, and built products that won government backing, awards and paying customers.",
     },
     {
       ko: "현재는 기술과 엔터테인먼트가 만나는 지점에서 전 세계 아티스트의 인프라를 구축하는 것을 목표로 하고 있습니다.",
-      en: "Today, my goal is to build infrastructure for artists around the world, where technology meets entertainment.",
+      en: "Now I’m working to build infrastructure for artists worldwide, where technology meets entertainment.",
     },
   ],
   /** Results at a glance, under the intro. */
   proofs: [
     {
-      value: { ko: "주요 기관 대회 수상", en: "Awards from major institutions" },
+      value: { ko: "주요 기관 대회 수상", en: "Awards from leading institutions" },
       detail: {
         ko: "창업진흥원, 한국경제신문, 현대해상, 과학기술사업화진흥원 등",
-        en: "KISED, The Korea Economic Daily, Hyundai Marine & Fire, COMPA and more",
+        en: "Including KISED, the Korea Economic Daily, Hyundai Marine & Fire and COMPA",
       },
     },
     {
-      value: { ko: "서비스 유료화", en: "Paid product" },
+      value: { ko: "서비스 유료화", en: "Monetized a product" },
       detail: {
         ko: "아이디어부터 개발, 수익화까지. 전 사이클 경험",
-        en: "From idea to development to revenue: the full cycle",
+        en: "The full cycle, from idea to build to revenue",
       },
     },
   ],
@@ -130,38 +130,38 @@ export const stages: Stage[] = [
     period: { ko: "2026", en: "2026" },
     badge: { ko: "본선 진출 및 수상", en: "Finalist & award winner" },
     titleLogo: armyStartupLogo,
-    title: { ko: "2026 제16회 육군창업경진대회", en: "ROK Army Startup Competition 2026 (16th)" },
-    role: { ko: "팀 Re:serve 대표", en: "Team lead, Team Re:serve" },
+    title: { ko: "2026 제16회 육군창업경진대회", en: "The 16th ROK Army Startup Competition, 2026" },
+    role: { ko: "팀 Re:serve 대표", en: "Team lead · Re:serve" },
     summary: {
       ko: "버려지던 훈련 데이터를 AI 리포트로 바꾸는 서비스로 본선(25팀) 진출 및 수상",
-      en: "Reached the top-25 finals and won an award with a service that turns discarded training data into AI reports",
+      en: "Made the final 25 and won an award for a service that turns wasted training data into AI reports",
     },
     highlights: [
       {
-        value: { ko: "본선 진출 및 수상", en: "Finalist & award" },
+        value: { ko: "본선 진출 및 수상", en: "Finalist & award winner" },
         detail: {
           ko: "육군본부 주최 · 본선 25팀 선정 · 팀 Re:serve 대표",
-          en: "Hosted by ROK Army HQ · top 25 finalists · led Team Re:serve",
+          en: "Hosted by ROK Army HQ · one of 25 finalist teams · led Team Re:serve",
         },
       },
       {
         value: { ko: "kracer", en: "kracer" },
         detail: {
           ko: "평가 데이터를 다음 교육으로 잇는 AI 교육·평가 운영체제 기획 및 개발 · 30일간 신규 기능 7개 · 사전예약 기관 3곳",
-          en: "Planned and built an AI training and evaluation platform linking assessment data to the next training · 7 new features in 30 days · 3 organizations pre-registered",
+          en: "Planned and built an AI platform for training and assessment that feeds results into the next round of training · shipped 7 new features in 30 days · 3 organizations signed up for early access",
         },
       },
       {
         value: { ko: "AI 분석", en: "AI analysis" },
         detail: {
           ko: "조직이 직접 설정한 지표 기반 AI 분석 아키텍처 설계 및 구현 · 계산은 시스템, 해석은 AI, 최종 결정은 사람",
-          en: "Designed and built an AI analysis architecture on metrics each organization defines · the system scores, AI interprets, people decide",
+          en: "Designed and built an AI analysis architecture around each organization’s own metrics · the system scores, AI interprets, people decide",
         },
       },
     ],
     links: [
       { label: { ko: "kracer.app", en: "kracer.app" }, href: "https://kracer.app" },
-      { label: { ko: "대회 공식 사이트", en: "Competition site" }, href: "https://army-startup.co.kr/" },
+      { label: { ko: "대회 공식 사이트", en: "Competition website" }, href: "https://army-startup.co.kr/" },
     ],
     sponsors: {
       label: { ko: "주최·주관·후원", en: "Organizers & sponsors" },
@@ -180,7 +180,7 @@ export const stages: Stage[] = [
         src: kracerMain,
         alt: {
           ko: "kracer — 차세대 AI 교육·평가 운영체제 (배경 사진: 대한민국 육군)",
-          en: "kracer — a next-generation AI training and evaluation platform (background photo: ROK Army)",
+          en: "kracer, a next-generation AI platform for training and assessment (background photo: ROK Army)",
         },
       },
     },
@@ -189,34 +189,34 @@ export const stages: Stage[] = [
     id: "stage-2",
     nav: "GORAE KOREAN",
     period: { ko: "2024.04 – 2025.08", en: "Apr 2024 – Aug 2025" },
-    badge: { ko: "수상·선정 6건", en: "6 awards & selections" },
+    badge: { ko: "수상·선정 6건", en: "6 awards & honors" },
     icon: iconGorae,
     title: { ko: "고래코리안", en: "Gorae Korean" },
-    role: { ko: "공동창업자 · 서비스 기획 · UX/UI · 노코드 개발", en: "Co-founder · Product · UX/UI · No-code" },
+    role: { ko: "공동창업자 · 서비스 기획 · UX/UI · 노코드 개발", en: "Co-founder · Product · UX/UI · No-code dev" },
     summary: {
       ko: "한국의 한부모 가정과 해외 학습자를 잇는 실용 한국어 회화 플랫폼",
-      en: "A practical Korean conversation platform connecting single-parent families in Korea with learners abroad",
+      en: "A conversational Korean platform pairing single parents in Korea with learners worldwide",
     },
     highlights: [
       {
-        value: { ko: "7일 · 200명", en: "200 in 7 days" },
+        value: { ko: "7일 · 200명", en: "200 sign‑ups in 7 days" },
         detail: {
           ko: "인스타그램 무료 수업 모집으로 시장 반응 검증",
-          en: "Validated demand through free Instagram classes",
+          en: "Validated demand with free Instagram classes",
         },
       },
       {
         value: { ko: "유료 학생 80명", en: "80 paying students" },
         detail: {
           ko: "Bubble 기반 웹 MVP · 자체 교재 제작 · 미혼모 튜터 2명 고용까지 수익화",
-          en: "Bubble-built web MVP · in-house materials · two single mothers hired as paid tutors",
+          en: "Bubble web MVP · in-house materials · hired two single mothers as tutors",
         },
       },
       {
         value: { ko: "MOU 체결", en: "MOU signed" },
         detail: {
           ko: "(사)한국미혼모가족협회와 업무협약 · 언론 보도",
-          en: "With the Korean Unwed Mothers’ Families Association · in the press",
+          en: "With the Korean Unwed Mothers’ Families Association · in the news",
         },
       },
       {
@@ -224,22 +224,22 @@ export const stages: Stage[] = [
         detail: [
           {
             ko: "중소벤처기업부 예비창업패키지 사전 인큐베이팅 우수예비기업",
-            en: "Ministry of SMEs Pre-Startup Package — top team",
+            en: "Pre-Startup Package pre-incubation — Outstanding Team",
           },
-          { ko: "현대해상 씨앗 프로그램 4위", en: "Hyundai Marine & Fire Seed Program — 4th" },
-          { ko: "SDGs 소셜벤처 챔피언십 금상", en: "SDGs Social Venture Championship — Gold" },
+          { ko: "현대해상 씨앗 프로그램 4위", en: "Hyundai Marine & Fire Seed Program — 4th place" },
+          { ko: "SDGs 소셜벤처 챔피언십 금상", en: "SDGs Social Venture Championship — Gold Prize" },
           { ko: "시기적절 창업대회 장려상", en: "Sigijeokjeol Startup Competition — Honorable Mention" },
-          { ko: "서울시립대 여름 창업경진대회 최우수상", en: "UOS Summer Startup Competition — Top Prize" },
-          { ko: "서울시립대 캠퍼스타운 입주기업 선정", en: "UOS Campus Town — selected startup" },
+          { ko: "서울시립대 여름 창업경진대회 최우수상", en: "UOS Summer Startup Competition — Excellence Award" },
+          { ko: "서울시립대 캠퍼스타운 입주기업 선정", en: "UOS Campus Town — selected for incubation" },
         ],
       },
     ],
     links: [
       { label: { ko: "goraekorean.site", en: "goraekorean.site" }, href: "https://goraekorean.site" },
-      { label: { ko: "MOU 기사", en: "MOU press" }, href: "https://www.startupdaily.kr/news/articleView.html?idxno=6454" },
+      { label: { ko: "MOU 기사", en: "MOU coverage" }, href: "https://www.startupdaily.kr/news/articleView.html?idxno=6454" },
     ],
     sponsors: {
-      label: { ko: "수상·선정", en: "Awards & selections" },
+      label: { ko: "수상·선정", en: "Awards & honors" },
       logos: [
         { src: awardHyundaiMarine, name: "현대해상 Hyundai Marine & Fire Insurance", scale: 0.88 },
         { src: awardCompa, name: "과학기술사업화진흥원 COMPA", scale: 1 },
@@ -259,7 +259,7 @@ export const stages: Stage[] = [
         },
         {
           src: goraeReviews,
-          alt: { ko: "고래코리안 수강생 실제 후기", en: "Real reviews from Gorae Korean students" },
+          alt: { ko: "고래코리안 수강생 실제 후기", en: "Reviews from Gorae Korean students" },
         },
       ],
     },
@@ -274,36 +274,36 @@ export const stages: Stage[] = [
     role: { ko: "회장", en: "President" },
     summary: {
       ko: "서울시립대 중앙 실전창업학회 운영 총괄",
-      en: "Led the University of Seoul’s central startup society",
+      en: "Led the University of Seoul’s official startup society",
     },
     highlights: [
       {
-        value: { ko: "해커톤 개최", en: "Hackathon host" },
+        value: { ko: "해커톤 개최", en: "Hosted a hackathon" },
         detail: {
           ko: "창업지원단과 서울시 사회문제 해결 ‘SEOUL:ution 해커톤’ 개최 · 모스랜드 등 기업 후원 유치 · 언론 보도",
-          en: "Hosted the SEOUL:ution Hackathon on Seoul’s social issues with the university startup center · secured sponsors incl. Mossland · covered by the press",
+          en: "Ran SEOUL:ution, a hackathon tackling Seoul’s social issues, with the university’s startup center · brought in sponsors including Mossland · covered by the press",
         },
       },
       {
-        value: { ko: "AI 교육 기획", en: "AI program" },
+        value: { ko: "AI 교육 기획", en: "AI education program" },
         detail: {
           ko: "캠퍼스타운과 학회 최초 공식 협력 · ‘AI SCHOOL’ 실습형 창업교육 기획 참여 · 역대 최대 참석자 특강 개최",
-          en: "First official partnership with UOS Campus Town · co-planned the hands-on ‘AI SCHOOL’ program · hosted its best-attended talk to date",
+          en: "The society’s first official partnership with UOS Campus Town · co-planned the hands-on ‘AI SCHOOL’ program · hosted Campus Town’s best-attended talk to date",
         },
       },
       {
-        value: { ko: "총장상 수상", en: "President’s Award" },
+        value: { ko: "총장상 수상", en: "University President’s Award" },
         detail: {
           ko: "‘제2공학관 → 창의혁신관’ 건물 명칭 변경 제안 등 창업 공간 브랜딩 공로",
-          en: "For branding the campus startup space, including renaming Engineering Hall II to ‘Creative Innovation Hall’",
+          en: "For rebranding the campus startup space, including proposing ‘Creative Innovation Hall’ as the new name for Engineering Hall II",
         },
       },
     ],
     links: [
       { label: { ko: "인액터스 코리아", en: "Enactus Korea" }, href: "https://enactuskorea.org/" },
       { label: { ko: "Instagram", en: "Instagram" }, href: "https://www.instagram.com/enactus_uos_" },
-      { label: { ko: "해커톤 기사", en: "Hackathon press" }, href: "https://www.joongang.co.kr/article/25387687" },
-      { label: { ko: "AI 교육 기사", en: "AI program press" }, href: "https://news.nate.com/view/20250923n02279" },
+      { label: { ko: "해커톤 기사", en: "Hackathon coverage" }, href: "https://www.joongang.co.kr/article/25387687" },
+      { label: { ko: "AI 교육 기사", en: "AI program coverage" }, href: "https://news.nate.com/view/20250923n02279" },
     ],
     gallery: [
       {
@@ -318,7 +318,7 @@ export const stages: Stage[] = [
         src: enactusGallery04,
         alt: {
           ko: "2025.06 ㈜캥스터즈 조정흠 부대표 초청 특강 — 캠퍼스타운 역대 최대 참석",
-          en: "Jun 2025 · Talk with Kangsters’ vice CEO — Campus Town’s best-attended talk",
+          en: "Jun 2025 · Talk by Kangsters VP Jo Jeong-heum — Campus Town’s best-attended talk",
         },
       },
       {
@@ -330,22 +330,22 @@ export const stages: Stage[] = [
       },
       {
         src: enactusGallery06,
-        alt: { ko: "2025.04 ㈜어치브모먼트 김기현 대표 초청 강연", en: "Apr 2025 · Talk with Achievement Moment CEO Kim Ki-hyun" },
+        alt: { ko: "2025.04 ㈜어치브모먼트 김기현 대표 초청 강연", en: "Apr 2025 · Talk by Achievement Moment CEO Kim Ki-hyun" },
       },
       {
         src: enactusGallery07,
-        alt: { ko: "2025.08 ㈜민들레마음 손유린 대표 초청 강연", en: "Aug 2025 · Talk with Mindeulle Maeum CEO Son Yu-rin" },
+        alt: { ko: "2025.08 ㈜민들레마음 손유린 대표 초청 강연", en: "Aug 2025 · Talk by Mindeulle Maeum CEO Son Yu-rin" },
       },
       {
         src: enactusGallery08,
-        alt: { ko: "2025.10 딥디퍼 신동혁 대표 초청 강연", en: "Oct 2025 · Talk with Deep Diper CEO Shin Dong-hyuk" },
+        alt: { ko: "2025.10 딥디퍼 신동혁 대표 초청 강연", en: "Oct 2025 · Talk by Deep Diper CEO Shin Dong-hyuk" },
       },
     ],
     media: {
       main: [
         {
           src: enactusGroup,
-          alt: { ko: "2025 인액터스 서울시립대 단체사진", en: "Enactus UOS 2025 group photo" },
+          alt: { ko: "2025 인액터스 서울시립대 단체사진", en: "The Enactus UOS team, 2025" },
           position: "50% 40%",
         },
         {
@@ -371,34 +371,34 @@ export const stages: Stage[] = [
     id: "stage-4",
     nav: "TEAMNIMALS",
     period: { ko: "2025", en: "2025" },
-    badge: { ko: "재학생 1/8 사용", en: "Used by 1 in 8 students" },
+    badge: { ko: "재학생 1/8 사용", en: "Used by 1 in 8 students on campus" },
     icon: iconTeamnimals,
     title: { ko: "팀니멀즈", en: "Teamnimals" },
-    role: { ko: "기획 · AI 로직 · UX/UI · 노코드 개발 · 그로스", en: "Product · AI logic · UX/UI · No-code · Growth" },
+    role: { ko: "기획 · AI 로직 · UX/UI · 노코드 개발 · 그로스", en: "Product · AI logic · UX/UI · No-code dev · Growth" },
     summary: {
       ko: "협업 성향을 16가지 동물로 보여주는 팀플 성향 테스트 + AI 팀 궁합 분석 서비스",
-      en: "A team-play personality test with 16 animal types, plus AI team-chemistry analysis",
+      en: "A teamwork personality test with 16 animal types, plus AI-powered team chemistry analysis",
     },
     highlights: [
       {
         value: { ko: "1,000명+", en: "1,000+ users" },
         detail: {
           ko: "광고 없이 재학생 약 1/8 사용",
-          en: "About 1 in 8 students, with zero ad spend",
+          en: "About 1 in 8 students at the university, with no ad spend",
         },
       },
       {
-        value: { ko: "정규 수업 10개+", en: "10+ courses" },
+        value: { ko: "정규 수업 10개+", en: "Used in 10+ courses" },
         detail: {
           ko: "경영학과·영어영문학과 등 실제 수업에서 활용",
-          en: "Adopted in real classes, from Business to English Literature",
+          en: "Adopted in actual courses, from business to English literature",
         },
       },
       {
         value: { ko: "재방문율 20%", en: "20% return rate" },
         detail: {
           ko: "결과 공유 중심의 바이럴 설계 · 평균 체류 1분 47초",
-          en: "Share-driven viral loop · 1m 47s average session",
+          en: "A viral loop built on sharing results · 1 min 47 s average session",
         },
       },
     ],
@@ -406,18 +406,18 @@ export const stages: Stage[] = [
     media: {
       main: {
         src: teamnimalsApp,
-        alt: { ko: "팀플 성향 테스트 + AI 팀 궁합 분석 서비스", en: "Team-play personality test + AI team-chemistry analysis" },
+        alt: { ko: "팀플 성향 테스트 + AI 팀 궁합 분석 서비스", en: "Teamwork personality test + AI team chemistry analysis" },
         position: "0% 50%",
       },
       inset: [
         {
           src: teamnimalsScreens,
-          alt: { ko: "팀니멀즈 AI 팀 궁합 분석 화면", en: "Teamnimals AI team-chemistry screens" },
+          alt: { ko: "팀니멀즈 AI 팀 궁합 분석 화면", en: "Teamnimals AI team chemistry screens" },
           position: "65% 50%",
         },
         {
           src: teamnimalsReviews,
-          alt: { ko: "팀니멀즈 실제 SNS 바이럴 후기", en: "Real Teamnimals shares on social media" },
+          alt: { ko: "팀니멀즈 실제 SNS 바이럴 후기", en: "Teamnimals results shared on social media" },
         },
       ],
     },
@@ -435,15 +435,15 @@ export const contact = {
   body: [
     {
       ko: "AI가 많은 것을 대신하는 시대에도, 누군가를 좋아하고 응원하는 마음은 변하지 않는다고 믿습니다.",
-      en: "Even as AI takes over more of what we do, I believe the way we love and cheer for others won’t change.",
+      en: "Even as AI takes on more of what we do, I believe the way we love and cheer for the people we admire will never change.",
     },
     {
       ko: "엔터테인먼트와 기술을 결합해 이 시장의 비효율을 풀어가려 합니다.",
-      en: "I want to bring entertainment and technology together to fix what’s broken in this market.",
+      en: "I want to bring entertainment and technology together to solve this industry’s inefficiencies.",
     },
     {
       ko: "다음 10년을 함께할 열정 있는 동료를 찾고 있습니다.",
-      en: "I’m looking for passionate people to spend the next ten years with.",
+      en: "I’m looking for passionate people to build the next ten years with.",
     },
   ],
   email: "hope13710@gmail.com",

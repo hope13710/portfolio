@@ -37,7 +37,7 @@ export function Frame({ picture, variant, sizes, priority, zoomable }: FrameProp
     <button
       type="button"
       className="frame-zoom"
-      aria-label={lang === "ko" ? `${picture.alt.ko} 크게 보기` : `Enlarge: ${picture.alt.en}`}
+      aria-label={lang === "ko" ? `${picture.alt.ko} 크게 보기` : `View larger: ${picture.alt.en}`}
       onClick={() => openLightbox(picture, lang)}
     >
       {frame}
@@ -85,7 +85,7 @@ export function FrameSlider({ pictures, ...frameProps }: FrameProps & { pictures
   const labels =
     lang === "ko"
       ? { prev: "이전 사진", next: "다음 사진", nth: (n: number) => `${n}번째 사진 보기` }
-      : { prev: "Previous photo", next: "Next photo", nth: (n: number) => `Show photo ${n}` };
+      : { prev: "Previous photo", next: "Next photo", nth: (n: number) => `Go to photo ${n}` };
 
   return (
     <div
