@@ -29,6 +29,7 @@ import enactusGallery07 from "@/assets/gallery/enactus-07.webp";
 import enactusGallery08 from "@/assets/gallery/enactus-08.webp";
 import goraeWeb from "@/assets/gorae-web.webp";
 import goraeApp from "@/assets/gorae-app.webp";
+import goraeReviews from "@/assets/gorae-reviews.webp";
 import teamnimalsScreens from "@/assets/teamnimals-screens.webp";
 import teamnimalsApp from "@/assets/teamnimals-app.webp";
 import teamnimalsReviews from "@/assets/teamnimals-reviews.webp";
@@ -237,11 +238,17 @@ export const stages: Stage[] = [
         src: goraeApp,
         alt: { ko: "온라인 실용 한국어 회화 플랫폼 고래코리안", en: "Gorae Korean, an online platform for practical Korean conversation" },
       },
-      inset: {
-        src: goraeWeb,
-        alt: { ko: "고래코리안 웹사이트 화면", en: "Gorae Korean website" },
-        position: "50% 0%",
-      },
+      inset: [
+        {
+          src: goraeWeb,
+          alt: { ko: "고래코리안 웹사이트 화면", en: "Gorae Korean website" },
+          position: "50% 0%",
+        },
+        {
+          src: goraeReviews,
+          alt: { ko: "고래코리안 수강생 실제 후기", en: "Real reviews from Gorae Korean students" },
+        },
+      ],
     },
   },
   {
