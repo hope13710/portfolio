@@ -320,15 +320,17 @@ h2.stage-title {
   padding-top: 14px;
 }
 
-.highlights strong {
+.highlight-value {
   display: block;
-  font-size: clamp(18px, 1.7vw, 23px);
-  line-height: 1.25;
+  font-size: clamp(20px, 1.75vw, 25px);
+  line-height: 1.2;
   font-weight: 750;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
+  color: var(--fg);
+  text-wrap: balance;
 }
 
-.highlights span {
+.highlight-detail {
   display: block;
   margin-top: 8px;
   font-size: 13.5px;
@@ -351,7 +353,6 @@ h2.stage-title {
   color: var(--muted);
 }
 
-/* The li > span rule above would otherwise turn each language span into a block. */
 .highlights .highlight-list li {
   border-top: 0;
   padding: 0 0 0 10px;
@@ -372,11 +373,6 @@ h2.stage-title {
   background: var(--accent);
 }
 
-.highlights .highlight-list span {
-  display: inline;
-  margin: 0;
-  font-size: inherit;
-}
 
 .stage-foot {
   margin-top: 28px;
@@ -692,6 +688,10 @@ html.js .stage[data-active] [data-reveal] {
     gap: 14px 20px;
   }
 
+  .highlight-value {
+    font-size: clamp(20px, 1.6vw, 22px);
+  }
+
   .stage-foot {
     margin-top: 18px;
   }
@@ -719,17 +719,18 @@ html.js .stage[data-active] [data-reveal] {
 
   .highlights li {
     display: grid;
-    grid-template-columns: 8.5em minmax(0, 1fr);
-    gap: 12px;
+    grid-template-columns: 7.2em minmax(0, 1fr);
+    gap: 14px;
+    align-items: baseline;
     padding-top: 10px;
   }
 
-  .highlights strong {
-    font-size: 17px;
+  .highlight-value {
+    font-size: 20px;
   }
 
-  .highlights span {
-    margin-top: 1px;
+  .highlight-detail {
+    margin-top: 0;
   }
 
   .highlights .highlight-list {

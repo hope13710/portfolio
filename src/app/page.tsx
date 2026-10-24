@@ -96,7 +96,7 @@ export default function Home() {
                   <ol className="highlights" data-reveal>
                     {stage.highlights.map((h) => (
                       <li key={h.value.en} className={Array.isArray(h.detail) ? "highlight-wide" : undefined}>
-                        <strong>
+                        <strong className="highlight-value">
                           <T t={h.value} />
                         </strong>
                         {Array.isArray(h.detail) ? (
@@ -108,7 +108,7 @@ export default function Home() {
                             ))}
                           </ul>
                         ) : (
-                          <span>
+                          <span className="highlight-detail">
                             <T t={h.detail} />
                           </span>
                         )}
