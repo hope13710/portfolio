@@ -4,6 +4,7 @@ import { Controls } from "@/components/Controls";
 import { Frame, FrameCycle } from "@/components/Frame";
 import { GalleryButton } from "@/components/GalleryButton";
 import { Lightbox } from "@/components/Lightbox";
+import { Sponsors } from "@/components/Sponsors";
 import { StageNav } from "@/components/StageNav";
 import { T } from "@/components/T";
 import { contact, profileIntro, stages } from "@/content";
@@ -146,6 +147,7 @@ export default function Home() {
                     ))}
                     {stage.gallery && <GalleryButton pictures={stage.gallery} />}
                   </div>
+                  {stage.sponsors && <Sponsors sponsors={stage.sponsors} placement="end" />}
                 </div>
 
                 <figure className={`stage-media media-pair${stage.media.inset ? "" : " media-solo"}`} data-reveal>
@@ -157,20 +159,7 @@ export default function Home() {
                       <FrameCycle pictures={stage.media.inset} variant="tall" sizes="(max-width: 900px) 30vw, 200px" zoomable />
                     </div>
                   )}
-                  {stage.sponsors && (
-                    <div className="sponsors">
-                      <p className="sponsors-label">
-                        <T t={stage.sponsors.label} />
-                      </p>
-                      <ul>
-                        {stage.sponsors.logos.map((logo) => (
-                          <li key={logo.name}>
-                            <Image src={logo.src} alt={logo.name} />
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+                  {stage.sponsors && <Sponsors sponsors={stage.sponsors} placement="media" />}
                 </figure>
               </div>
             </section>

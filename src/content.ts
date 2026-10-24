@@ -62,8 +62,11 @@ export type Stage = {
   links: { label: L; href: string }[];
   /** On-site photos opened from the link row; each `alt` doubles as the caption. */
   gallery?: Picture[];
-  /** Logos shown under the images: a competition's organizers and sponsors, or the programs behind awards. */
-  sponsors?: { label: L; logos: { src: StaticImageData; name: string }[] };
+  /**
+   * Logos for a competition's organizers and sponsors, or the programs behind awards.
+   * `scale` evens out optical size: wordmarks without an icon look larger at the same height.
+   */
+  sponsors?: { label: L; logos: { src: StaticImageData; name: string; scale?: number }[] };
   /** Several inset pictures take turns in the same frame. */
   /** Without an inset, the main picture takes the full width of the media column. */
   media: { main: Picture; inset?: Picture | Picture[] };
@@ -149,13 +152,13 @@ export const stages: Stage[] = [
     sponsors: {
       label: { ko: "주최·주관·후원", en: "Organizers & sponsors" },
       logos: [
-        { src: sponsorArmyHq, name: "육군본부 ROK Army Headquarters" },
-        { src: sponsorHankyung, name: "한국경제신문 The Korea Economic Daily" },
-        { src: sponsorDaejeon, name: "대전일자리경제진흥원 Business and Employment Agency of Daejeon" },
-        { src: sponsorKosme, name: "중소벤처기업진흥공단 KOSME" },
-        { src: sponsorKised, name: "창업진흥원 KISED" },
-        { src: sponsorKyobo, name: "교보생명 Kyobo Life" },
-        { src: sponsorKoreanAir, name: "대한항공 Korean Air" },
+        { src: sponsorArmyHq, name: "육군본부 ROK Army Headquarters", scale: 1.15 },
+        { src: sponsorHankyung, name: "한국경제신문 The Korea Economic Daily", scale: 0.82 },
+        { src: sponsorDaejeon, name: "대전일자리경제진흥원 Business and Employment Agency of Daejeon", scale: 1.05 },
+        { src: sponsorKosme, name: "중소벤처기업진흥공단 KOSME", scale: 0.85 },
+        { src: sponsorKised, name: "창업진흥원 KISED", scale: 1 },
+        { src: sponsorKyobo, name: "교보생명 Kyobo Life", scale: 1.15 },
+        { src: sponsorKoreanAir, name: "대한항공 Korean Air", scale: 0.85 },
       ],
     },
     media: {
@@ -224,9 +227,9 @@ export const stages: Stage[] = [
     sponsors: {
       label: { ko: "수상·선정", en: "Awards & selections" },
       logos: [
-        { src: awardHyundaiMarine, name: "현대해상 Hyundai Marine & Fire Insurance" },
-        { src: awardCompa, name: "과학기술사업화진흥원 COMPA" },
-        { src: awardSeoulImpact, name: "서울시립대 캠퍼스타운 SEOUL IMPACT" },
+        { src: awardHyundaiMarine, name: "현대해상 Hyundai Marine & Fire Insurance", scale: 0.88 },
+        { src: awardCompa, name: "과학기술사업화진흥원 COMPA", scale: 1 },
+        { src: awardSeoulImpact, name: "서울시립대 캠퍼스타운 SEOUL IMPACT", scale: 1.2 },
       ],
     },
     media: {

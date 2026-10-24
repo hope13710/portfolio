@@ -520,18 +520,65 @@ h2.stage-title {
 
 .sponsors img {
   display: block;
-  height: 22px;
+  height: calc(var(--logo-h) * var(--s, 1));
   width: auto;
+  max-width: 100%;
 }
 
-/* On desktop, slightly smaller logos so seven of them fit in two rows. */
+/* Desktop: logos under the images, sized so seven of them fit in two rows. */
 @media (min-width: 901px) {
+  .sponsors {
+    --logo-h: clamp(16px, 1.45vw, 21px);
+  }
+
   .sponsors ul {
     gap: 14px 20px;
   }
 
-  .sponsors img {
-    height: clamp(16px, 1.45vw, 21px);
+  .sponsors-end {
+    display: none;
+  }
+}
+
+/* Phones and tablets: logos close the stage like end credits, in an even two-column grid without the card. */
+@media (max-width: 900px) {
+  .sponsors-media {
+    display: none;
+  }
+
+  /* With the logo row moved away, every image pair reserves the inset's drop itself. */
+  .media-pair:not(.media-solo) {
+    padding-bottom: var(--drop);
+  }
+
+  .sponsors-end {
+    --logo-h: 16px;
+    margin-top: 32px;
+  }
+
+  .sponsors-end ul,
+  html[data-theme="dark"] .sponsors-end ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-top: 1px solid var(--line);
+    border-radius: 0;
+  }
+
+  .sponsors-end li {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .sponsors-end li:nth-child(odd) {
+    border-right: 1px solid var(--line);
   }
 }
 
