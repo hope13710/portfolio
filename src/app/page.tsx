@@ -193,17 +193,6 @@ export default function Home() {
             </a>
 
             <footer className="contact-foot" data-reveal>
-              <p className="etc">
-                <span className="etc-label">
-                  <T t={contact.etc.label} />
-                </span>
-                <span className="etc-period">
-                  <T t={contact.etc.period} />
-                </span>
-                <span>
-                  <T t={contact.etc.text} />
-                </span>
-              </p>
               <p className="copyright">© {new Date().getFullYear()} Kang Ju Yeong</p>
             </footer>
           </div>

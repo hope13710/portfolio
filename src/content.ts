@@ -410,12 +410,4 @@ export const contact = {
     en: "Looking for my next party",
   },
   email: "hope13710@gmail.com",
-  etc: {
-    label: { ko: "기타", en: "Etc." },
-    period: { ko: "2026 – 2027", en: "2026 – 2027" },
-    text: {
-      ko: "군복무 · 합천과학화예비군훈련장 VR 영상모의사격 조교 · 일 평균 약 200명 사격 훈련 운영 지원",
-      en: "Military service · VR shooting-simulator instructor at Hapcheon Reserve Forces Training Center · supporting ~200 trainees a day",
-    },
-  },
 };
