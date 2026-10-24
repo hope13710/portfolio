@@ -325,12 +325,12 @@ export const stages: Stage[] = [
     id: "stage-4",
     nav: "ARMY STARTUP",
     period: { ko: "2026 · 제16회", en: "2026 · 16th" },
-    badge: { ko: "본선 진출 · 25팀", en: "Finalist · Top 25" },
+    badge: { ko: "본선 진출 및 수상", en: "Finalist & award winner" },
     title: { ko: "육군창업경진대회", en: "ROK Army Startup Competition" },
     role: { ko: "팀 Re:serve 대표", en: "Team lead, Team Re:serve" },
     summary: {
-      ko: "버려지던 훈련 데이터를 AI 리포트로 바꾸는 서비스로 본선 진출",
-      en: "Reached the finals with a service that turns discarded training data into AI reports",
+      ko: "버려지던 훈련 데이터를 AI 리포트로 바꾸는 서비스로 본선(25팀) 진출 및 수상",
+      en: "Reached the top-25 finals and won an award with a service that turns discarded training data into AI reports",
     },
     highlights: [
       {
