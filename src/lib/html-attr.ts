@@ -25,7 +25,8 @@ export function useHtmlAttr(name: "lang" | "theme", fallback: string) {
 export function setHtmlAttr(name: "lang" | "theme", value: string) {
   const root = document.documentElement;
   root.dataset[name] = value;
-  if (name === "lang") root.lang = value;
+  if (name !== "lang") return; // The theme isn't saved: it follows the device setting on every visit.
+  root.lang = value;
   try {
     localStorage.setItem(name, value);
   } catch {

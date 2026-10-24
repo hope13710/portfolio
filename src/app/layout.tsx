@@ -39,9 +39,10 @@ export const viewport: Viewport = {
   ],
 };
 
-// Runs before first paint: restores the saved language/theme (or follows the browser)
-// and turns on reveal animations only when JS is available.
-const bootScript = `(function(){var d=document.documentElement;d.classList.add('js');try{var l=localStorage.getItem('lang');var t=localStorage.getItem('theme');}catch(e){}if(l!=='ko'&&l!=='en'){l=(navigator.language||'ko').toLowerCase().indexOf('ko')===0?'ko':'en';}if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}d.dataset.lang=l;d.lang=l;d.dataset.theme=t;})();`;
+// Runs before first paint: restores the saved language (or follows the browser), turns on reveal
+// animations only when JS is available, and makes the theme follow the device's light/dark setting,
+// switching live when it changes. The theme toggle only overrides it for the current visit.
+const bootScript = `(function(){var d=document.documentElement;d.classList.add('js');var l;try{l=localStorage.getItem('lang');localStorage.removeItem('theme');}catch(e){}if(l!=='ko'&&l!=='en'){l=(navigator.language||'ko').toLowerCase().indexOf('ko')===0?'ko':'en';}d.dataset.lang=l;d.lang=l;var m=window.matchMedia('(prefers-color-scheme: dark)');var f=function(){d.dataset.theme=m.matches?'dark':'light';};f();if(m.addEventListener){m.addEventListener('change',f);}else if(m.addListener){m.addListener(f);}})();`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
