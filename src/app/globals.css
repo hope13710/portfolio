@@ -273,6 +273,21 @@ a {
   letter-spacing: -0.035em;
 }
 
+/* The icon sizes with the title (em), so it stays in proportion on every screen. */
+h2.stage-title {
+  display: flex;
+  align-items: center;
+  gap: 0.28em;
+}
+
+.stage-icon {
+  flex: none;
+  width: 0.92em;
+  height: 0.92em;
+  border-radius: 22.5%;
+  box-shadow: 0 0 0 1px var(--line);
+}
+
 .stage-role {
   display: inline-block;
   margin: 16px 0 0;

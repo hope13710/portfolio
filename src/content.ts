@@ -1,6 +1,9 @@
 import type { StaticImageData } from "next/image";
 
 import profile from "@/assets/profile.webp";
+import iconEnactus from "@/assets/icon-enactus.png";
+import iconGorae from "@/assets/icon-gorae.png";
+import iconTeamnimals from "@/assets/icon-teamnimals.png";
 import enactusGroup from "@/assets/enactus-group.webp";
 import enactusPoster from "@/assets/enactus-poster.webp";
 import enactusAiSchool from "@/assets/enactus-aischool.webp";
@@ -23,6 +26,8 @@ export type Stage = {
   id: string;
   nav: string;
   period: L;
+  /** Rounded-square app icon shown beside the title. */
+  icon: StaticImageData;
   title: L;
   role: L;
   summary: L;
@@ -65,6 +70,7 @@ export const stages: Stage[] = [
     id: "stage-1",
     nav: "ENACTUS",
     period: { ko: "2025", en: "2025" },
+    icon: iconEnactus,
     title: { ko: "Enactus", en: "Enactus" },
     role: { ko: "회장", en: "President" },
     summary: {
@@ -127,6 +133,7 @@ export const stages: Stage[] = [
     id: "stage-2",
     nav: "GORAE KOREAN",
     period: { ko: "2024.04 – 2025.08", en: "Apr 2024 – Aug 2025" },
+    icon: iconGorae,
     title: { ko: "고래코리안", en: "Gorae Korean" },
     role: { ko: "공동창업자 · 서비스 기획 · UX/UI · 노코드 개발", en: "Co-founder · Product · UX/UI · No-code" },
     summary: {
@@ -191,6 +198,7 @@ export const stages: Stage[] = [
     id: "stage-3",
     nav: "TEAMNIMALS",
     period: { ko: "2025", en: "2025" },
+    icon: iconTeamnimals,
     title: { ko: "팀니멀즈", en: "Teamnimals" },
     role: { ko: "기획 · AI 로직 · UX/UI · 노코드 개발 · 그로스", en: "Product · AI logic · UX/UI · No-code · Growth" },
     summary: {

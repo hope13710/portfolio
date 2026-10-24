@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Controls } from "@/components/Controls";
 import { Frame, FrameCycle } from "@/components/Frame";
 import { Lightbox } from "@/components/Lightbox";
@@ -81,6 +83,7 @@ export default function Home() {
                     </span>
                   </p>
                   <h2 className="stage-title" data-reveal>
+                    <Image className="stage-icon" src={stage.icon} alt="" />
                     <T t={stage.title} />
                   </h2>
                   <p className="stage-role" data-reveal>
