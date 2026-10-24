@@ -287,8 +287,8 @@ export const stages: Stage[] = [
       {
         value: { ko: "AI 교육 기획", en: "AI education program" },
         detail: {
-          ko: "캠퍼스타운과 학회 최초 공식 협력 · ‘AI SCHOOL’ 실습형 창업교육 기획 참여 · 역대 최대 참석자 특강 개최",
-          en: "The society’s first official partnership with UOS Campus Town · co-planned the hands-on ‘AI SCHOOL’ program · hosted Campus Town’s best-attended talk to date",
+          ko: "캠퍼스타운과 학회 최초 공식 협력 · ‘AI SCHOOL’ 실습형 창업교육 기획 참여 · 선배 창업가/CEO 초청 특강 개최",
+          en: "The society’s first official partnership with UOS Campus Town · co-planned the hands-on ‘AI SCHOOL’ program · hosted talks by seasoned founders and CEOs",
         },
       },
       {
