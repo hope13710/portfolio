@@ -326,7 +326,7 @@ h2.stage-title {
   line-height: 1.2;
   font-weight: 750;
   letter-spacing: -0.035em;
-  color: var(--fg);
+  color: var(--accent);
   text-wrap: balance;
 }
 
