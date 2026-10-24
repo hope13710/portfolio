@@ -288,11 +288,8 @@ export const stages: Stage[] = [
         },
       },
     ],
-    tag: {
-      ko: "연합 창업 아이디어톤 2학기 연속 1위",
-      en: "1st place at inter-university ideathons, two semesters running",
-    },
     links: [
+      { label: { ko: "인액터스 코리아", en: "Enactus Korea" }, href: "https://enactuskorea.org/" },
       { label: { ko: "Instagram", en: "Instagram" }, href: "https://www.instagram.com/enactus_uos_" },
       { label: { ko: "해커톤 기사", en: "Hackathon press" }, href: "https://www.joongang.co.kr/article/25387687" },
       { label: { ko: "AI 교육 기사", en: "AI program press" }, href: "https://news.nate.com/view/20250923n02279" },
