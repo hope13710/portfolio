@@ -14,6 +14,7 @@ import sponsorKyobo from "@/assets/sponsors/kyobo.png";
 import sponsorKoreanAir from "@/assets/sponsors/korean-air.png";
 import awardHyundaiMarine from "@/assets/sponsors/hyundai-marine.png";
 import awardSeoulImpact from "@/assets/sponsors/seoul-impact.png";
+import awardCompa from "@/assets/sponsors/compa.png";
 import kracerMain from "@/assets/kracer-main.webp";
 import kracerField from "@/assets/kracer-field.webp";
 import kracerKakao from "@/assets/kracer-kakao.webp";
@@ -270,6 +271,7 @@ export const stages: Stage[] = [
       label: { ko: "수상·선정", en: "Awards & selections" },
       logos: [
         { src: awardHyundaiMarine, name: "현대해상 Hyundai Marine & Fire Insurance" },
+        { src: awardCompa, name: "과학기술사업화진흥원 COMPA" },
         { src: awardSeoulImpact, name: "서울시립대 캠퍼스타운 SEOUL IMPACT" },
       ],
     },
