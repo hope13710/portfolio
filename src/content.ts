@@ -150,7 +150,7 @@ export const stages: Stage[] = [
       {
         value: { ko: "kracer", en: "kracer" },
         detail: {
-          ko: "평가 데이터를 다음 교육으로 잇는 AI 교육·평가 운영체제 기획 및 개발 · 30일간 신규 기능 7개 · 사전예약 기관 3곳",
+          ko: "평가 데이터를 다음 교육으로 잇는 AI 교육·평가 운영체제 기획 및 개발 · 30일간 신규 기능 7개 · 사전예약 기관 3곳 확보",
           en: "Planned and built an AI platform for training and assessment that feeds results into the next round of training · shipped 7 new features in 30 days · 3 organizations signed up for early access",
         },
       },
