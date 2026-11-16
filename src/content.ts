@@ -67,7 +67,12 @@ export type Stage = {
    * Logos for a competition's organizers and sponsors, or the programs behind awards.
    * `scale` evens out optical size: wordmarks without an icon look larger at the same height.
    */
-  sponsors?: { label: L; logos: { src: StaticImageData; name: string; scale?: number }[] };
+  sponsors?: {
+    label: L;
+    logos: { src: StaticImageData; name: string; scale?: number }[];
+    /** Show only the first N logos plus a “+M” button that reveals the rest. */
+    visible?: number;
+  };
   /** Several inset pictures take turns in the same frame. */
   /** Without an inset, the main picture takes the full width of the media column. */
   /** Several main pictures become a slider the viewer flips through (arrows, dots or swipe). */
@@ -168,12 +173,13 @@ export const stages: Stage[] = [
       logos: [
         { src: sponsorArmyHq, name: "육군본부 ROK Army Headquarters", scale: 1.15 },
         { src: sponsorHankyung, name: "한국경제신문 The Korea Economic Daily", scale: 0.82 },
+        { src: sponsorKised, name: "창업진흥원 KISED", scale: 1 },
+        { src: sponsorKoreanAir, name: "대한항공 Korean Air", scale: 0.85 },
         { src: sponsorDaejeon, name: "대전일자리경제진흥원 Business and Employment Agency of Daejeon", scale: 1.05 },
         { src: sponsorKosme, name: "중소벤처기업진흥공단 KOSME", scale: 0.85 },
-        { src: sponsorKised, name: "창업진흥원 KISED", scale: 1 },
         { src: sponsorKyobo, name: "교보생명 Kyobo Life", scale: 1.15 },
-        { src: sponsorKoreanAir, name: "대한항공 Korean Air", scale: 0.85 },
       ],
+      visible: 4,
     },
     media: {
       main: {

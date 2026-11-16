@@ -587,6 +587,33 @@ h2.stage-title {
   }
 }
 
+.sponsors-more {
+  height: calc(var(--logo-h, 22px) + 8px);
+  min-width: 40px;
+  padding: 0 10px;
+  border: 1px solid rgba(17, 17, 19, 0.15);
+  border-radius: 999px;
+  background: none;
+  color: #62626b;
+  font: inherit;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.sponsors-more:hover,
+.sponsors-more:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+html[data-theme="dark"] .sponsors-more {
+  border-color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.75);
+}
+
 /* Dark mode: white logos on a transparent card. */
 html[data-theme="dark"] .sponsors ul {
   background: transparent;
