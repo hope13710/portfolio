@@ -136,8 +136,8 @@ export const stages: Stage[] = [
     title: { ko: "육군창업경진대회", en: "ROK Army Startup Competition" },
     role: { ko: "팀 Re:serve 대표", en: "Team lead · Re:serve" },
     summary: {
-      ko: "버려지던 훈련 데이터를 AI 리포트로 바꾸는 서비스로 본선(25팀) 진출 및 수상",
-      en: "Made the final 25 and won an award for a service that turns wasted training data into AI reports",
+      ko: "코딩 없이 평가를 설계하고, AI가 개인별 피드백 리포트와 조직의 의사결정 근거를 만들어 훈련 데이터를 자산화하는 서비스 제작",
+      en: "Built a no-code assessment tool where AI produces personal feedback reports and evidence for decisions, turning training data into an asset",
     },
     highlights: [
       {
