@@ -157,8 +157,8 @@ export const stages: Stage[] = [
       {
         value: { ko: "AI 분석", en: "AI analysis" },
         detail: {
-          ko: "조직이 직접 설정한 지표 기반 AI 분석 아키텍처 설계 및 구현 · 계산은 시스템, 해석은 AI, 최종 결정은 사람",
-          en: "Designed and built an AI analysis architecture around each organization’s own metrics · the system scores, AI interprets, people decide",
+          ko: "조직이 직접 설정한 지표 기반 AI 분석 아키텍처 설계 및 구현 · 조직 교육자료 기반 RAG · 폐쇄망 대응 Model Gateway 설계",
+          en: "Designed and built AI analysis on each organization’s own metrics · RAG over its training materials · a model gateway built for air-gapped networks",
         },
       },
     ],
