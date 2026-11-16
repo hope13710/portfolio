@@ -12,7 +12,7 @@ const siteUrl =
 
 const title = "강주영 · Product Builder";
 const description =
-  "아티스트를 위한 인프라를 구축하고자 합니다. 육군창업경진대회 본선 진출 및 수상 · 고래코리안 공동창업 · Enactus 회장.";
+  "아티스트를 위한 인프라를 구축하고자 합니다. 육군창업경진대회 창의상(인사사령관상) 수상 · 고래코리안 공동창업 · Enactus 회장.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

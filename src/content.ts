@@ -132,7 +132,7 @@ export const stages: Stage[] = [
     id: "stage-1",
     nav: "ARMY STARTUP",
     period: { ko: "2026 · 제16회", en: "2026 · 16th edition" },
-    badge: { ko: "본선 진출 및 수상", en: "Finalist & award winner" },
+    badge: { ko: "창의상 수상", en: "Creativity Award" },
     title: { ko: "육군창업경진대회", en: "ROK Army Startup Competition" },
     role: { ko: "팀 Re:serve 대표", en: "Team lead · Re:serve" },
     summary: {
@@ -141,10 +141,10 @@ export const stages: Stage[] = [
     },
     highlights: [
       {
-        value: { ko: "본선 진출 및 수상", en: "Finalist & award winner" },
+        value: { ko: "창의상 수상", en: "Creativity Award" },
         detail: {
-          ko: "육군본부 주최 · 본선 25팀 선정 · 팀 Re:serve 대표",
-          en: "Hosted by ROK Army HQ · one of 25 finalist teams · led Team Re:serve",
+          ko: "인사사령관상 · 육군본부 주최 · 본선 25팀 진출 · 팀 Re:serve 대표",
+          en: "Commander’s Award, ROK Army Personnel Command · hosted by ROK Army HQ · one of 25 finalist teams · led Team Re:serve",
         },
       },
       {
