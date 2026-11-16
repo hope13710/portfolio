@@ -4,7 +4,6 @@ import profile from "@/assets/profile.webp";
 import iconEnactus from "@/assets/icon-enactus.png";
 import iconGorae from "@/assets/icon-gorae.png";
 import iconTeamnimals from "@/assets/icon-teamnimals.png";
-import armyStartupLogo from "@/assets/army-startup-logo.png";
 import sponsorArmyHq from "@/assets/sponsors/army-hq.png";
 import sponsorHankyung from "@/assets/sponsors/hankyung.png";
 import sponsorDaejeon from "@/assets/sponsors/daejeon.png";
@@ -132,10 +131,9 @@ export const stages: Stage[] = [
   {
     id: "stage-1",
     nav: "ARMY STARTUP",
-    period: { ko: "2026", en: "2026" },
+    period: { ko: "2026 · 제16회", en: "2026 · 16th edition" },
     badge: { ko: "본선 진출 및 수상", en: "Finalist & award winner" },
-    titleLogo: armyStartupLogo,
-    title: { ko: "2026 제16회 육군창업경진대회", en: "The 16th ROK Army Startup Competition, 2026" },
+    title: { ko: "육군창업경진대회", en: "ROK Army Startup Competition" },
     role: { ko: "팀 Re:serve 대표", en: "Team lead · Re:serve" },
     summary: {
       ko: "버려지던 훈련 데이터를 AI 리포트로 바꾸는 서비스로 본선(25팀) 진출 및 수상",
