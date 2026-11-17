@@ -143,8 +143,8 @@ export const stages: Stage[] = [
       {
         value: { ko: "창의상(인사사령관상)", en: "Creativity Award" },
         detail: {
-          ko: "육군본부 주최 · 매회 수백 팀 참가(직전 15회 651팀) · 본선 25팀 진출 · 팀 Re:serve 대표",
-          en: "Presented by the ROK Army Personnel Command · hundreds of teams enter each year (651 last time) · one of 25 finalists · led Team Re:serve",
+          ko: "육군본부 주최 · 매회 300~600여 팀 참가 · 본선 25팀 진출 · 팀 Re:serve 대표",
+          en: "Presented by the ROK Army Personnel Command · 300–600+ teams enter each round · one of 25 finalists · led Team Re:serve",
         },
       },
       {
