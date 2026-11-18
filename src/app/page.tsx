@@ -93,19 +93,8 @@ export default function Home() {
                     </span>
                   </p>
                   <h2 className="stage-title" data-reveal>
-                    {stage.titleLogo ? (
-                      <>
-                        <Image className="stage-title-logo" src={stage.titleLogo} alt="" />
-                        <span className="sr-only">
-                          <T t={stage.title} />
-                        </span>
-                      </>
-                    ) : (
-                      <>
-                        {stage.icon && <Image className="stage-icon" src={stage.icon} alt="" />}
-                        <T t={stage.title} />
-                      </>
-                    )}
+                    {stage.icon && <Image className={`stage-icon${stage.iconPlain ? " stage-icon-plain" : ""}`} src={stage.icon} alt="" />}
+                    <T t={stage.title} />
                   </h2>
                   <p className="stage-role" data-reveal>
                     <T t={stage.role} />

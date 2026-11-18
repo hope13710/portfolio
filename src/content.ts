@@ -4,6 +4,7 @@ import profile from "@/assets/profile.webp";
 import iconEnactus from "@/assets/icon-enactus.png";
 import iconGorae from "@/assets/icon-gorae.png";
 import iconTeamnimals from "@/assets/icon-teamnimals.png";
+import iconArmyStartup from "@/assets/icon-army-startup.svg";
 import sponsorArmyHq from "@/assets/sponsors/army-hq.png";
 import sponsorHankyung from "@/assets/sponsors/hankyung.png";
 import sponsorDaejeon from "@/assets/sponsors/daejeon.png";
@@ -51,8 +52,8 @@ export type Stage = {
   badge: L;
   /** Rounded-square app icon shown beside the title. */
   icon?: StaticImageData;
-  /** Wordmark shown in place of the title text (the text stays for screen readers). */
-  titleLogo?: StaticImageData;
+  /** The icon is an emblem with its own shape, shown without the rounded app-icon tile. */
+  iconPlain?: boolean;
   title: L;
   role: L;
   summary: L;
@@ -133,6 +134,8 @@ export const stages: Stage[] = [
     nav: "ARMY STARTUP",
     period: { ko: "2026 · 제16회", en: "2026 · 16th edition" },
     badge: { ko: "창의상(인사사령관상) 수상", en: "Creativity Award winner" },
+    icon: iconArmyStartup,
+    iconPlain: true,
     title: { ko: "육군창업경진대회", en: "ROK Army Startup Competition" },
     role: { ko: "팀 Re:serve 대표", en: "Team lead · Re:serve" },
     summary: {

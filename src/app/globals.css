@@ -311,11 +311,9 @@ h2.stage-title {
   box-shadow: 0 0 0 1px var(--line);
 }
 
-.stage-title-logo {
-  display: block;
-  height: 1.4em;
-  width: auto;
-  max-width: 100%;
+.stage-icon-plain {
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .sr-only {
