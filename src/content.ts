@@ -277,6 +277,7 @@ export const stages: Stage[] = [
     period: { ko: "2025", en: "2025" },
     badge: { ko: "행사 8회 개최", en: "8 events hosted" },
     icon: iconEnactus,
+    iconPlain: true,
     title: { ko: "Enactus", en: "Enactus" },
     role: { ko: "회장", en: "President" },
     summary: {
