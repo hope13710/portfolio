@@ -308,7 +308,7 @@ export const stages: Stage[] = [
       },
     ],
     links: [
-      { label: { ko: "Enactus Worldwide", en: "Enactus Worldwide" }, href: "https://enactus.org/" },
+      { label: { ko: "인액터스 월드와이드", en: "Enactus Worldwide" }, href: "https://enactus.org/" },
       { label: { ko: "인액터스 코리아", en: "Enactus Korea" }, href: "https://enactuskorea.org/" },
       { label: { ko: "Instagram", en: "Instagram" }, href: "https://www.instagram.com/enactus_uos_" },
       { label: { ko: "해커톤 기사", en: "Hackathon coverage" }, href: "https://www.joongang.co.kr/article/25387687" },
