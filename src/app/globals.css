@@ -98,10 +98,10 @@ a {
 }
 
 .stage-inner {
-  width: min(1180px, 100%);
+  width: min(1240px, 100%);
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-  gap: clamp(40px, 6vw, 88px);
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6.4fr);
+  gap: clamp(40px, 4.6vw, 64px);
   align-items: center;
 }
 
@@ -296,6 +296,27 @@ a {
   letter-spacing: -0.035em;
 }
 
+/* A long English name (e.g. "ROK Army Startup Competition") steps down so it takes two lines, not three. */
+html[data-lang="en"] .stage-title-long {
+  font-size: clamp(30px, 3vw, 42px);
+}
+
+/* English runs about a third longer than Korean; one step smaller keeps each stage to one screen. */
+html[data-lang="en"] .highlight-detail {
+  font-size: 14.5px;
+}
+
+html[data-lang="en"] .highlights .highlight-list {
+  font-size: 13.5px;
+}
+
+/* …and its text column takes an even half, so the longer lines don't push the stage past one screen. */
+@media (min-width: 1201px) {
+  html[data-lang="en"] .stage-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
 /* The icon sizes with the title (em), so it stays in proportion on every screen. */
 h2.stage-title {
   display: flex;
@@ -348,47 +369,67 @@ h2.stage-title {
 
 .highlights {
   list-style: none;
-  margin: 32px 0 0;
+  margin: 28px 0 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
 }
 
+/* One row per result: the figure on the left, its explanation in readable 15px text on the right. */
 .highlights li {
+  display: grid;
+  grid-template-columns: 8.2em minmax(0, 1fr);
+  gap: 16px;
+  align-items: baseline;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.highlights > li:first-child {
   border-top: 2px solid var(--fg);
-  padding-top: 14px;
 }
 
 .highlight-value {
   display: block;
-  font-size: clamp(20px, 1.75vw, 25px);
+  font-size: clamp(19px, 1.5vw, 22px);
   line-height: 1.2;
   font-weight: 750;
   letter-spacing: -0.035em;
   color: var(--accent);
   text-wrap: balance;
+  /* Korean figures break only between words, never inside one (e.g. before a closing bracket). */
+  word-break: keep-all;
 }
 
 .highlight-detail {
   display: block;
-  margin-top: 8px;
-  font-size: 13.5px;
+  font-size: 15px;
   line-height: 1.55;
   color: var(--muted);
+  text-wrap: pretty;
 }
 
 .highlights .highlight-wide {
   grid-column: 1 / -1;
 }
 
+/* A list (e.g. awards) runs under its heading across the full width, in two columns. */
+.highlights > li.highlight-wide {
+  display: block;
+}
+
+.highlights > li.highlight-wide .highlight-list {
+  margin-top: 6px;
+}
+
 .highlights .highlight-list {
   list-style: none;
-  margin: 6px 0 0;
+  margin: 0;
   padding: 0;
   columns: 2;
-  column-gap: 28px;
-  font-size: 13px;
+  column-gap: 24px;
+  font-size: 14px;
   line-height: 1.45;
   color: var(--muted);
 }
@@ -872,10 +913,10 @@ html.js .stage[data-active] [data-reveal] {
 }
 
 /* ───────── Short laptop screens: tighten vertical rhythm so each stage fits one screen ───────── */
-@media (min-width: 901px) and (max-height: 820px) {
+@media (min-width: 901px) and (max-height: 880px) {
   .stage {
     padding-top: calc(var(--header-h) + 8px);
-    padding-bottom: 24px;
+    padding-bottom: 12px;
   }
 
   .eyebrow {
@@ -892,16 +933,33 @@ html.js .stage[data-active] [data-reveal] {
   }
 
   .highlights {
-    margin-top: 20px;
-    gap: 14px 20px;
+    margin-top: 16px;
+    gap: 10px;
+  }
+
+  .highlights li {
+    padding-top: 9px;
   }
 
   .highlight-value {
-    font-size: clamp(20px, 1.6vw, 22px);
+    font-size: clamp(18px, 1.5vw, 21px);
+  }
+
+  .highlight-detail {
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
+
+  .highlights .highlight-list {
+    line-height: 1.4;
+  }
+
+  .highlights .highlight-list li {
+    margin-top: 2px;
   }
 
   .stage-foot {
-    margin-top: 18px;
+    margin-top: 16px;
   }
 
   .intro-name {
@@ -948,16 +1006,13 @@ html.js .stage[data-active] [data-reveal] {
   }
 
   .highlights {
-    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
     margin-top: 24px;
   }
 
   .highlights li {
-    display: grid;
     grid-template-columns: 7.2em minmax(0, 1fr);
     gap: 14px;
-    align-items: baseline;
     padding-top: 10px;
   }
 
@@ -965,14 +1020,6 @@ html.js .stage[data-active] [data-reveal] {
     font-size: 20px;
   }
 
-  .highlight-detail {
-    margin-top: 0;
-  }
-
-  .highlights .highlight-list {
-    columns: 1;
-    margin-top: 0;
-  }
 }
 
 /* ───────── Tablet / phone ───────── */
@@ -1033,6 +1080,13 @@ html.js .stage[data-active] [data-reveal] {
 
   .start-hint {
     display: none;
+  }
+}
+
+/* Phones: one award per line reads better than two cramped columns. */
+@media (max-width: 600px) {
+  .highlights .highlight-list {
+    columns: 1;
   }
 }
 

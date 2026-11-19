@@ -144,17 +144,17 @@ export const stages: Stage[] = [
     },
     highlights: [
       {
-        value: { ko: "창의상(인사사령관상)", en: "Creativity Award" },
+        value: { ko: "창의상\u200B(인사사령관상)", en: "Creativity Award" },
         detail: {
-          ko: "육군본부 주최 · 매회 300~600여 팀 참가 · 본선 25팀 진출 · 팀 Re:serve 대표",
-          en: "Presented by the ROK Army Personnel Command · 300–600+ teams enter each round · one of 25 finalists · led Team Re:serve",
+          ko: "육군본부 주최 · 매회 300~600여 팀 참가 · 본선 25팀 진출",
+          en: "Presented by the ROK Army Personnel Command · 300–600+ teams enter each round · one of 25 finalists",
         },
       },
       {
         value: { ko: "kracer", en: "kracer" },
         detail: {
           ko: "평가 데이터를 다음 교육으로 잇는 AI 교육·평가 운영체제 기획 및 개발 · 30일간 신규 기능 7개 · 사전예약 기관 3곳 확보",
-          en: "Planned and built an AI platform for training and assessment that feeds results into the next round of training · shipped 7 new features in 30 days · 3 organizations signed up for early access",
+          en: "Planned and built an AI training and assessment platform that feeds results into the next round · 7 new features in 30 days · 3 organizations signed up for early access",
         },
       },
       {

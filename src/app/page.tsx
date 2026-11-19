@@ -92,7 +92,7 @@ export default function Home() {
                       <T t={stage.badge} />
                     </span>
                   </p>
-                  <h2 className="stage-title" data-reveal>
+                  <h2 className={`stage-title${stage.title.en.length > 20 ? " stage-title-long" : ""}`} data-reveal>
                     {stage.icon && <Image className={`stage-icon${stage.iconPlain ? " stage-icon-plain" : ""}`} src={stage.icon} alt="" />}
                     <T t={stage.title} />
                   </h2>
