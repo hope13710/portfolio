@@ -82,15 +82,15 @@ export type Stage = {
 export const profileIntro = {
   id: "stage-0",
   nav: "PRODUCT BUILDER",
-  name: { ko: "강주영", en: "Kang Ju Yeong" },
-  alias: { ko: "Kang Ju Yeong · Ethan", en: "Ethan · 강주영" },
+  name: { ko: "강주영", en: "Juyeong Kang" },
+  alias: { ko: "Juyeong Kang · Ethan", en: "Ethan · 강주영" },
   headline: {
     ko: "사람들을 즐겁게 하는 제품을 만들고자 합니다",
     en: "I want to build products that make people happy",
   },
   /** Written in full sentences, unlike the noun-ending copy elsewhere: this is a personal greeting. */
   body: [
-    { ko: "안녕하세요, 강주영입니다.", en: "Hi, I’m Kang Ju Yeong." },
+    { ko: "안녕하세요, 강주영입니다.", en: "Hi, I’m Juyeong Kang." },
     {
       ko: "저는 인생을 ‘게임’으로, 사업을 ‘종합예술’로 정의하고 있으며, IT/AI, 엔터테인먼트에 관심이 있습니다.",
       en: "I see life as a game, and business as an art form where every discipline comes together. I’m most drawn to tech, AI and entertainment.",
@@ -123,7 +123,7 @@ export const profileIntro = {
   ],
   photo: {
     src: profile,
-    alt: { ko: "강주영 프로필 사진", en: "Portrait of Kang Ju Yeong" },
+    alt: { ko: "강주영 프로필 사진", en: "Portrait of Juyeong Kang" },
     position: "50% 30%",
   },
 };

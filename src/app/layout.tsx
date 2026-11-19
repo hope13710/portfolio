@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "./",
-    siteName: "Kang Ju Yeong",
+    siteName: "Juyeong Kang",
     title,
     description,
     locale: "ko_KR",

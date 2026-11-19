@@ -20,7 +20,7 @@ export default function Home() {
     <>
       <header className="site-header">
         <a className="brand" href={`#${profileIntro.id}`}>
-          KANG JU YEONG
+          JUYEONG KANG
         </a>
         <Controls />
       </header>
@@ -183,7 +183,7 @@ export default function Home() {
             </a>
 
             <footer className="contact-foot" data-reveal>
-              <p className="copyright">© {new Date().getFullYear()} Kang Ju Yeong</p>
+              <p className="copyright">© {new Date().getFullYear()} Juyeong Kang</p>
             </footer>
           </div>
         </section>
