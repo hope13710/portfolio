@@ -281,8 +281,8 @@ export const stages: Stage[] = [
     title: { ko: "Enactus", en: "Enactus" },
     role: { ko: "회장", en: "President" },
     summary: {
-      ko: "서울시립대 중앙 실전창업학회 운영 총괄",
-      en: "Led the University of Seoul’s official startup society",
+      ko: "글로벌 비영리 대학생 연합 조직 인액터스(Enactus) 소속, 서울시립대 실전창업학회 운영 총괄",
+      en: "Led the University of Seoul chapter of Enactus, a global nonprofit network of student entrepreneurs",
     },
     highlights: [
       {
@@ -308,6 +308,7 @@ export const stages: Stage[] = [
       },
     ],
     links: [
+      { label: { ko: "Enactus Worldwide", en: "Enactus Worldwide" }, href: "https://enactus.org/" },
       { label: { ko: "인액터스 코리아", en: "Enactus Korea" }, href: "https://enactuskorea.org/" },
       { label: { ko: "Instagram", en: "Instagram" }, href: "https://www.instagram.com/enactus_uos_" },
       { label: { ko: "해커톤 기사", en: "Hackathon coverage" }, href: "https://www.joongang.co.kr/article/25387687" },
