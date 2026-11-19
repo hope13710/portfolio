@@ -215,8 +215,8 @@ export const stages: Stage[] = [
       {
         value: { ko: "유료 학생 80명", en: "80 paying students" },
         detail: {
-          ko: "Bubble 기반 웹 MVP · 자체 교재 제작 · 미혼모 튜터 2명 고용까지 수익화",
-          en: "Bubble web MVP · in-house materials · hired two single mothers as tutors",
+          ko: "Bubble 기반 웹 MVP · 자체 교재 제작 · 미혼모 튜터 2명, 인도네시아 고객 대상 수익화",
+          en: "Bubble web MVP · in-house materials · two single-mother tutors, revenue from customers in Indonesia",
         },
       },
       {
